@@ -3,7 +3,7 @@
 <!--setting material properties which will be used later-->
 <xacro:include filename="inertia.xacro"/>
 <!-- Import the wheel macro -->
-<xacro:include filename="$(find my_robot)/robot_urdf_description/wheel_macro.xacro"/>
+<xacro:include filename="$(find diff_drive_robot)/robot_urdf_description/wheel_macro.xacro"/>
 
 <!-- Define chassisproperties -->
 <xacro:property name="chassis_length" value="0.25"/> 

@@ -29,7 +29,7 @@
     <gazebo>
         <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" 
             filename="libgz_ros2_control-system.so">
-            <parameters>$(find my_robot)/config/controller.yaml</parameters>                                                               
+            <parameters>$(find diff_drive_robot)/config/controller.yaml</parameters>                                                               
         </plugin>
     </gazebo>
 
