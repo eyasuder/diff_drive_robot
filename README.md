@@ -26,7 +26,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 |           Component                |                 Image                                                                   |      Description   |
 |------------------------------------|-----------------------------------------------------------------------------------------|--------------------|
-| Raspberry Pi 4                     | ![Raspberry Pi Model B 4GB](../Documents/Hardware_components_image/Raspberry_pi_4.png)   | Main onboard computer |
+| Raspberry Pi 4                     | <img width="250" height="250" alt="Raspberry_pi_4" src="https://github.com/user-attachments/assets/1461957e-ee82-4077-a8de-702d60fd988e" />   | Main onboard computer |
 | Arduino Mega 2560                  |                                                                                         | Low-level motor controller |
 | 2D LiDAR                           |                                                                                         | Environment scanning |
 | Motor Driver                       |                                                                                         |Controls DC motors |
