@@ -7,7 +7,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 ---
 
-Project Features:
+## Project Features:
 - Differential drive robot
 - ROS 2 Humble
 - URDF/Xacro robot description
