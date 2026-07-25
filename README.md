@@ -26,11 +26,11 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 | Component | Image | Description |
 |-----------|-------------|
-| Raspberry Pi 4 |![raspberry-pi-4-modelo-b-4gb](<img width="709" height="540" alt="Raspberry pi 4" src="https://github.com/user-attachments/assets/7747e986-11b3-410f-b11d-8f0e9b1ee757" />) | Main onboard computer |
+| Raspberry Pi 4 | <img width="709" height="540" alt="Raspberry pi 4" src="https://github.com/user-attachments/assets/7747e986-11b3-410f-b11d-8f0e9b1ee757" /> | Main onboard computer |
 | Arduino Mega 2560 |  | Low-level motor controller |
 | 2D LiDAR | | Environment scanning |
 | Motor Driver | |Controls DC motors |
-| DC Geared Motors (with encoders) | | | Robot locomotion |
+| DC Geared Motors (with encoders) |  | Robot locomotion |
 | Caster Wheel | | Robot support |
 | 3S LiPo Battery | | Power source |
 | DC-DC Buck Converter | | 5V supply for electronics |
