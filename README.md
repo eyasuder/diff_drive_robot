@@ -20,7 +20,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
   
 ---
 
-#Hardware Implementation
+# Hardware Implementation
 
 ## 🛠 Hardware Components
 
