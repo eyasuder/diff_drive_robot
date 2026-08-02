@@ -78,7 +78,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ---
 ## Testing Motors
 - Upload `ROSArduinoBridge` to Arduino mega2560.
-- Clone `serial motor demo` from `git@github.com:joshnewans/serial_motor_demo.git`.
+- Clone `serial motor demo` from https://github.com/joshnewans/serial_motor_demo.
 - Run `miniterm` to test both open loop and closed loop control. For closed loop control, experimental encoder revolution per count is approximately 1975 for GJA25-375 endoder dc motor.
   
 <img width="400" height="500" alt="Motor_test" src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97" />
