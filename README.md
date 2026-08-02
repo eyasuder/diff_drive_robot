@@ -43,13 +43,14 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <p align="center">
   
 <img width="500" height="400" alt="Wiring_diagram" src="https://github.com/user-attachments/assets/b5c21228-4f27-41d2-aab6-c3036bb37daa" />
-<img width="500" height="400" alt="DiffDrive_robot" src="https://github.com/user-attachments/assets/5ead0c9a-fbc2-4cf2-be0a-fb20b22cb9e7" />
+<img width="500" height="400" alt="Diff_Drive_robot" src="https://github.com/user-attachments/assets/a4a62e39-995f-4814-aaa8-8ff34b47d410" />
+
 </p>
 
 ---
 ## Arduino mega2560 Pin Configuration
 
-- Clone motor control and encoder reading of `ROSArduinoBridge` from https://github.com/joshnewans/ros_arduino_bridge.git.
+- Clone motor control and encoder reading from `ROSArduinoBridge` from https://github.com/joshnewans/ros_arduino_bridge.git.
 - Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno.
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 is used for interrupt routine.
   
@@ -77,6 +78,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ---
 ## Testing Motors
 -
+<img width="2552" height="3529" alt="Motor_test" src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97" />
 
 
 
