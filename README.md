@@ -49,6 +49,31 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ---
 ## Arduino Pin Configuration
 
+| Description                                                  | From | To                                          |
+| ------------------------------------------------------------ | ------ | ------ |
+| Left Motor Positive Terminal | Motor A (Left) , Red | L298, OUT1 |
+| Motor A (Left), Encoder power - (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor A (Left) , Black | Arduino, GND |
+| Motor A (Left), Encoder A phase signal feedback (11 signals per turn of the motor) | Motor A (Left) , Yellow | Arduino, D3 |
+| Motor A (Left), Encoder B phase signal feedback (11 signals per turn of the motor) | Motor A (Left) , Green | Arduino, D2 |
+| Motor A (Left), Encoder power supply + (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor A (Left) , Blue | Arduino, 5V |
+| Motor A (Left), power - (can be reversed with Red to move motor forward and reverse) | Motor A (Left) , White | L298, OUT2 |
+| Motor B (Right), power + (can be reversed with Red to move motor forward and reverse) | Motor B (Right), Red | L298, OUT4 |
+| Motor B (Right), Encoder power - (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor B (Right), Black | Arduino, GND |
+| Motor B (Right), Encoder A phase signal feedback (11 signals per turn of the motor) | Motor B (Right), Yellow | Arduino, A4 |
+| Motor B (Right), Encoder B phase signal feedback (11 signals per turn of the motor) | Motor B (Right), Green | Arduino, A5 |
+| Motor B (Right), Encoder power supply + (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor B (Right), Blue | Arduino, 5V |
+| Motor B (Right), power - (can be reversed with Red to move motor forward and reverse)e | Motor B (Right), White | L298, OUT3 |
+| Motor A (Left) direction      | L298, IN1, Green | Arduino, D10 |
+| Motor A (Left) direction      | L298, IN2, Yellow | Arduino, D6 |
+| Motor B (Right) direction      | L298, IN3, Orange | Arduino, D9 |
+| Motor B (Right) direction      | L298, IN4, Red | Arduino, D5 |
+
+
+
+
+
+
+
 # 🧠 Software Stack
 
 ## Software Requirements
