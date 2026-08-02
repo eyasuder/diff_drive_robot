@@ -47,26 +47,30 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 </p>
 
 ---
-## Arduino Pin Configuration
+## Arduino mega2560 Pin Configuration
 
-| Description                                                  | From | To                                          |
-| ------------------------------------------------------------ | ------ | ------ |
-| Left Motor Positive Terminal | Motor A (Left) , Red | L298, OUT1 |
-| Motor A (Left), Encoder power - (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor A (Left) , Black | Arduino, GND |
-| Motor A (Left), Encoder A phase signal feedback (11 signals per turn of the motor) | Motor A (Left) , Yellow | Arduino, D3 |
-| Motor A (Left), Encoder B phase signal feedback (11 signals per turn of the motor) | Motor A (Left) , Green | Arduino, D2 |
-| Motor A (Left), Encoder power supply + (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor A (Left) , Blue | Arduino, 5V |
-| Motor A (Left), power - (can be reversed with Red to move motor forward and reverse) | Motor A (Left) , White | L298, OUT2 |
-| Motor B (Right), power + (can be reversed with Red to move motor forward and reverse) | Motor B (Right), Red | L298, OUT4 |
-| Motor B (Right), Encoder power - (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor B (Right), Black | Arduino, GND |
-| Motor B (Right), Encoder A phase signal feedback (11 signals per turn of the motor) | Motor B (Right), Yellow | Arduino, A4 |
-| Motor B (Right), Encoder B phase signal feedback (11 signals per turn of the motor) | Motor B (Right), Green | Arduino, A5 |
-| Motor B (Right), Encoder power supply + (Voltage range 3.3-5V. Positive and negative can not be connected incorrectly) | Motor B (Right), Blue | Arduino, 5V |
-| Motor B (Right), power - (can be reversed with Red to move motor forward and reverse)e | Motor B (Right), White | L298, OUT3 |
-| Motor A (Left) direction      | L298, IN1, Green | Arduino, D10 |
-| Motor A (Left) direction      | L298, IN2, Yellow | Arduino, D6 |
-| Motor B (Right) direction      | L298, IN3, Orange | Arduino, D9 |
-| Motor B (Right) direction      | L298, IN4, Red | Arduino, D5 |
+- Clone motor control and encoder reading of `ROSArduinoBridge` from https://github.com/joshnewans/ros_arduino_bridge.git.
+- Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno.
+- Port K (port register pins) of Arduino mega2560 is used for interrupt routine.
+  
+| Description                                                  | From                     | To               |
+| ------------------------------------------------------------ | ------------------------- | ------ |
+| Left Motor Positive terminal                                | Left Motor A (Left) , Red       | L298, OUT1 |
+| Left Motor Encoder negative terminal                       | Left Motor A (Left) , Black       | Arduino, GND |
+| Left Motor Encoder A phase signal feedback                 | Motor A (Left) , Yellow     | Arduino, D3 |
+| Left Motor Encoder B phase signal feedback                | Motor A (Left) , Green      | Arduino, D2 |
+| Left Motor Encoder positive terminal                       | Motor A (Left) , Blue      | Arduino, 5V |
+| Left Motor negative terminal                               | Motor A (Left) , White     | L298, OUT2 |
+| Right Motor positive terminal                             | Motor B (Right), Red       | L298, OUT4 |
+| Right Motor Encoder negative terminal                      | Motor B (Right), Black    | Arduino, GND |
+| Right Motor Encoder A phase signal feedback                | Motor B (Right), Yellow   | Arduino, A4 |
+| Right Motor Encoder B phase signal feedback                | Motor B (Right), Green    | Arduino, A5 |
+| Right Motor Encoder positive terminal                     | Motor B (Right), Blue      | Arduino, 5V |
+| Right Motor negative terminal                             | Motor B (Right), White     | L298, OUT3 |
+| Left Motor direction                                     | L298, IN1, Green            | Arduino, D9 |
+| Left Motor direction                                     | L298, IN2, Yellow           | Arduino, D5 |
+| Right Motor direction                                   | L298, IN3, Orange            | Arduino, D10 |
+| Right Motor direction                                   | L298, IN4, Red               | Arduino, D6 |
 
 
 
