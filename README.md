@@ -1,4 +1,3 @@
-<img width="3000" height="2403" alt="Wiring_diagram" src="https://github.com/user-attachments/assets/14f63887-19e5-48a8-81a1-df9b6b9a4f59" />
 # 2D LiDAR-Based SLAM and Navigation2 for a Differential Drive Robot
 
 ## 📌 Overview
@@ -42,7 +41,8 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 ## Motor Wiring and Differential Drive Robot Hardware Platform
 <p align="center">
-<img width="3000" height="2403" alt="Wiring_diagram" src="https://github.com/user-attachments/assets/b5c21228-4f27-41d2-aab6-c3036bb37daa" />
+  
+<img width="500" height="400" alt="Wiring_diagram" src="https://github.com/user-attachments/assets/b5c21228-4f27-41d2-aab6-c3036bb37daa" />
 <img width="500" height="400" alt="DiffDrive_robot" src="https://github.com/user-attachments/assets/5ead0c9a-fbc2-4cf2-be0a-fb20b22cb9e7" />
 </p>
 
