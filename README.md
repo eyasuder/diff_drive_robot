@@ -40,11 +40,10 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ---
 
 ## Motor Wiring and Differential Drive Robot Hardware Platform
-<p align="center">
-  
-<img width="500" height="400" alt="Wiring_diagram" src="https://github.com/user-attachments/assets/b5c21228-4f27-41d2-aab6-c3036bb37daa" />
-<img width="500" height="400" alt="Diff_Drive_robot" src="https://github.com/user-attachments/assets/a4a62e39-995f-4814-aaa8-8ff34b47d410" />
 
+<p align="center">
+<img width="400" height="400" alt="Wiring_diagram" src="https://github.com/user-attachments/assets/b5c21228-4f27-41d2-aab6-c3036bb37daa" />
+<img width="500" height="400" alt="Diff_Drive_robot" src="https://github.com/user-attachments/assets/a4a62e39-995f-4814-aaa8-8ff34b47d410" />
 </p>
 
 ---
