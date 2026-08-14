@@ -49,11 +49,11 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ---
 ## Arduino mega2560 Pin Configuration
 
-- Clone motor control and encoder reading from `ROSArduinoBridge` from https://github.com/joshnewans/ros_arduino_bridge.git.
+- Clone motor control code from `ROSArduinoBridge` [here]( https://github.com/joshnewans/ros_arduino_bridge.git).
 - Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno.
-- Port K port register pins (which are pin A8 to A15) of Arduino mega2560 is used for interrupt routine.
+- Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
   
-| Description                                                  | To                    |
+|           From                                               | To                    |
 | ------------------------------------------------------------  | -----------------------|
 | Left Motor Positive terminal                                  | OUT4 L298N motor driver|
 | Left Motor Encoder negative terminal                          | GND pin Arduino2560    |
