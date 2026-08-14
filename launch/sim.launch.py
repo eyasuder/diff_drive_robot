@@ -27,7 +27,7 @@ def generate_launch_description():
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
-        'empty.world'
+        'ware_sample.sdf'
         )    
     
     world = LaunchConfiguration('world')
@@ -90,7 +90,7 @@ def generate_launch_description():
                     package='twist_mux',
                     executable='twist_mux',
                     output='screen',
-                    remappings={('/cmd_vel_out', '/cmd_vel')},
+                    remappings={('/cmd_vel_out', 'diff_cont/cmd_vel_unstamped')},
                     parameters=[{'use_sim_time':True}, twist_mux_config]
     )
     

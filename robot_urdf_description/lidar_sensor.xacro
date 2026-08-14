@@ -28,12 +28,13 @@
         </geometry>
         <material name="Dark"/>
     </visual>
-
+    <!--
     <collision>
         <geometry>
             <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
         </geometry>
     </collision>
+    -->
     <xacro:inertia_of_cylinder mass="0.06" radius="${lidar_radius}" length="${lidar_height}">
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:inertia_of_cylinder>
@@ -57,14 +58,14 @@
         <lidar>
             <scan>
                 <horizontal>
-                    <samples>90</samples>
+                    <samples>360</samples>
                     <min_angle>-3.14</min_angle>
                     <max_angle>3.14</max_angle>
                 </horizontal>
             </scan>
 
                 <range>
-                    <min>0.3</min>
+                    <min>0.1</min>
                     <max>12</max>
                 </range>
         </lidar>
