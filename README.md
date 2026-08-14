@@ -82,11 +82,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
   
 <img width="400" height="500" alt="Motor_test" src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97" />
 
-
-
-
-
-
+---
 
 # 🧠 Software Stack
 
@@ -98,3 +94,96 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 - RViz2
 - Navigation2
 - SLAM Toolbox
+
+---
+# Repository Structure
+
+```
+diff_robot/
+├── src/
+    ├── diff_drive_robot/
+        ├── config/
+        │   ├── controller.yaml
+        │   ├── gz_bridge.yaml
+        │   ├── joystick.yaml
+        │   ├── mapper_params_online_async.yaml
+        │   ├── nav2_params.yaml
+        │   ├── twist_mux.yaml
+        │   └── *.rviz
+        │
+        ├── launch/
+        │   ├── sim.launch.py
+        │   ├── online_async_launch.py
+        │   ├── localization_launch.py
+        │   ├── navigation_launch.py
+        │   ├── rplidar.launch.py
+        │   └── joystick_controller.launch.py
+        │
+        ├── robot_urdf_description/
+        │   ├── robot_main_urdf.xacro
+        │   ├── robot_description.xacro
+        │   ├── ros2_control.xacro
+        │   ├── gazebo_control.xacro
+        │   ├── wheel_macro.xacro
+        │   ├── lidar_sensor.xacro
+        │   ├── camera_sensor.xacro
+        │   ├── depth_camera.xacro
+        │   └── inertia.xacro
+        │
+        ├── worlds/
+        │   ├── warehouse_world.sdf
+        │   ├── ware_sample.sdf
+        │   ├── ware1_sample.sdf
+        │   ├── demo_world_fortress.sdf
+        │   └── ...
+        │
+        ├── CMakeLists.txt
+        ├── package.xml
+        └── README.md
+
+```
+# Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/your_username/your_repository.git
+```
+
+Build the workspace
+
+```bash
+cd robot_ws
+
+colcon build
+
+source install/setup.bash
+```
+
+---
+
+# Running the Project
+
+## 1. Launch Gazebo Simulation
+
+```bash
+ros2 launch robot_bringup simulation.launch.py
+```
+
+---
+
+## 2. Start SLAM
+
+```bash
+ros2 launch robot_navigation slam.launch.py
+```
+
+---
+
+## 3. Save the Map
+
+```bash
+ros2 run nav2_map_server map_saver_cli -f my_map
+```
+
+---
