@@ -84,24 +84,18 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <tr>
 <td align="center">
 <b>Motor Wiring</b><br>
-<img src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97"" width="400">
+<img src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97"" width="400" height="300">
 </td>
 
 <td align="center">
 <b>Motor Testing Demo</b><br>
 <a href="https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12">
-<img src="images/navigation_thumbnail.png" width="800" height="400">
+<img src="images/navigation_thumbnail.png" width="200" height="300">
 </a>
 </td>
 </tr>
 </table>
-  
-<p align="center">
-<img width="400" height="500" alt="Motor_test"
-  src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97" />
-https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12
 
-</p>
 ---
 
 # 🧠 Software Stack
@@ -116,6 +110,82 @@ https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12
 - SLAM Toolbox
 
 ---
+
+# Installation
+
+- Install `ROS2 Humble` and `Gazebo fortress` (Gazebo Ignition)
+- Clone the repository
+
+```bash
+https://github.com/eyasuder/diff_drive_robot.git
+```
+
+Build the workspace
+
+```bash
+cd diff_drive
+
+colcon build --symlink-install
+
+source install/setup.bash
+```
+
+---
+
+# Running the Project
+
+## 1. Launch Gazebo Simulation
+
+```bash
+ros2 launch diff_drive_robot sim.launch.py
+```
+
+---
+
+## 2. Start SLAM
+
+```bash
+ros2 launch diff_drive_robot online_async_launch.py slam_params_file:=./src/diff_drive_robot/config/mapper_params_online_async.yaml use_sim_time:=true
+```
+
+---
+
+## 3. Save the Map
+
+```bash
+ros2 run nav2_map_server map_saver_cli -f my_map
+```
+## 4. Launch AMCL (Adaptive Monte Carlo Localization)
+
+```bash
+ros2 launch diff_drive_robot localization_launch.py map:=./path/to/saved/map use_sim_time:=true
+```
+## 5.  Launch Nav2
+
+```bash
+ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
+```
+
+---
+# Results
+
+## Mapping
+
+(Add mapping screenshot.)
+
+```
+
+```
+
+---
+
+## Navigation
+
+(Add navigation screenshot.)
+
+```
+images/navigation_result.png
+```
 # Repository Structure
 
 ```
@@ -162,48 +232,3 @@ diff_robot/
         └── README.md
 
 ```
-# Installation
-
-Clone the repository
-
-```bash
-https://github.com/eyasuder/diff_drive_robot.git
-```
-
-Build the workspace
-
-```bash
-cd diff_drive
-
-colcon build --symlink-install
-
-source install/setup.bash
-```
-
----
-
-# Running the Project
-
-## 1. Launch Gazebo Simulation
-
-```bash
-ros2 launch diff_drive_robot sim.launch.py
-```
-
----
-
-## 2. Start SLAM
-
-```bash
-ros2 launch diff_drive_robot online_async_launch.py use_sim_time:=true
-```
-
----
-
-## 3. Save the Map
-
-```bash
-ros2 run nav2_map_server map_saver_cli -f my_map
-```
-
----
