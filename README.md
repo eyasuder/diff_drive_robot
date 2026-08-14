@@ -79,9 +79,13 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 - Upload `ROSArduinoBridge` to Arduino mega2560.
 - Clone `serial motor demo` from https://github.com/joshnewans/serial_motor_demo.
 - Run `miniterm` to test both open loop and closed loop control. For closed loop control, experimental encoder revolution per count is approximately 1975 for GJA25-375 endoder dc motor.
-  
-<img width="400" height="500" alt="Motor_test" src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97" />
+- 
+<p align="center">
+<img width="400" height="500" alt="Motor_test"
+  src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97" />
+https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12
 
+</p>
 ---
 
 # 🧠 Software Stack
@@ -147,15 +151,15 @@ diff_robot/
 Clone the repository
 
 ```bash
-git clone https://github.com/your_username/your_repository.git
+https://github.com/eyasuder/diff_drive_robot.git
 ```
 
 Build the workspace
 
 ```bash
-cd robot_ws
+cd diff_drive
 
-colcon build
+colcon build --symlink-install
 
 source install/setup.bash
 ```
@@ -167,7 +171,7 @@ source install/setup.bash
 ## 1. Launch Gazebo Simulation
 
 ```bash
-ros2 launch robot_bringup simulation.launch.py
+ros2 launch diff_drive_robot sim.launch.py
 ```
 
 ---
@@ -175,7 +179,7 @@ ros2 launch robot_bringup simulation.launch.py
 ## 2. Start SLAM
 
 ```bash
-ros2 launch robot_navigation slam.launch.py
+ros2 launch diff_drive_robot online_async_launch.py use_sim_time:=true
 ```
 
 ---
