@@ -174,7 +174,11 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <table>
 <tr>
 <td align="center">
-<b>Motor Testing Demo</b><br>
+<b>Mapping simulation</b><br>
+<img src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97"" width="400" height="300">
+</td>
+<td align="center">
+<b>Mapping Demo</b><br>
 <a href="https://github.com/user-attachments/assets/18ec67ad-8791-4fad-b2c5-1c8c16dd160f">
 <img src="images/navigation_thumbnail.png" width="200" height="300">
 </a>
@@ -193,12 +197,12 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <table>
 <tr>
 <td align="center">
-<b>Motor Wiring</b><br>
-<img src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97"" width="400" height="300">
+<b>Navigation simulation</b><br>
+<img src=""" width="400" height="300">
 </td>
 
 <td align="center">
-<b>Motor Testing Demo</b><br>
+<b>Navigation Demo</b><br>
 <a href="https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12">
 <img src="images/navigation_thumbnail.png" width="200" height="300">
 </a>
