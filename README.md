@@ -120,7 +120,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 https://github.com/eyasuder/diff_drive_robot.git
 ```
 
-Build the workspace
+- Build the workspace
 
 ```bash
 cd diff_drive
@@ -171,7 +171,16 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 ## Mapping
 
-(Add mapping screenshot.)
+<table>
+<tr>
+<td align="center">
+<b>Motor Testing Demo</b><br>
+<a href="https://github.com/user-attachments/assets/18ec67ad-8791-4fad-b2c5-1c8c16dd160f">
+<img src="images/navigation_thumbnail.png" width="200" height="300">
+</a>
+</td>
+</tr>
+</table>
 
 ```
 
@@ -181,11 +190,22 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 ## Navigation
 
-(Add navigation screenshot.)
+<table>
+<tr>
+<td align="center">
+<b>Motor Wiring</b><br>
+<img src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97"" width="400" height="300">
+</td>
 
-```
-images/navigation_result.png
-```
+<td align="center">
+<b>Motor Testing Demo</b><br>
+<a href="https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12">
+<img src="images/navigation_thumbnail.png" width="200" height="300">
+</a>
+</td>
+</tr>
+</table>
+
 # Repository Structure
 
 ```
