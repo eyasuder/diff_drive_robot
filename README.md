@@ -42,8 +42,8 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ## Motor Wiring and Differential Drive Robot Hardware Platform
 
 <p align="center">
-<img width="400" height="400" alt="Wiring_diagram" src="https://github.com/user-attachments/assets/b5c21228-4f27-41d2-aab6-c3036bb37daa" />
-<img width="500" height="400" alt="Diff_Drive_robot" src="https://github.com/user-attachments/assets/a4a62e39-995f-4814-aaa8-8ff34b47d410" />
+<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/Wiring_diagram.png" />
+<img width="500" height="400" alt="Diff_Drive_robot" src="./Files/images/Diff_Drive_robot.jpg" />
 </p>
 
 ---
@@ -84,12 +84,12 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <tr>
 <td align="center">
 <b>Motor Wiring</b><br>
-<img src="https://github.com/user-attachments/assets/98e78012-0208-4298-85ec-d2c7a8912f97"" width="400" height="300">
+<img src=".src/diff_drive_robot/Files/images/Wiring_diagram.png"" width="400" height="300">
 </td>
 
 <td align="center">
 <b>Motor Testing Demo</b><br>
-<a href="https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12">
+<a href=".src/diff_drive_robot/Files/videos/Motor_testing.mp4">
 <img src="images/navigation_thumbnail.png" width="200" height="300">
 </a>
 </td>
