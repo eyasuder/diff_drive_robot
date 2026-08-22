@@ -49,7 +49,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ---
 ## Arduino mega2560 Pin Configuration
 
-- Clone motor control code from `ROSArduinoBridge` [here]( https://github.com/joshnewans/ros_arduino_bridge.git).
+- Clone motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
 - Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno.
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
   
@@ -84,14 +84,12 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <tr>
 <td align="center">
 <b>Motor Wiring</b><br>
-<img src="./Files/images/simulation_images/Wiring_diagram.png"" width="400" height="300">
+<img src="./Files/images/simulation_images/Wiring_diagram.png" width="400" height="300">
 </td>
 
 <td align="center">
 <b>Motor Testing Demo</b><br>
-<a href="./Files/videos/Motor_testing.mp4">
-<img src="images/navigation_thumbnail.png" width="200" height="300">
-</a>
+<video src="https://github.com/user-attachments/assets/19398011-af18-4047-8f3f-b6f6d7177571" width="400" height="300" controls></video>
 </td>
 </tr>
 </table>
@@ -177,18 +175,14 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <b>Mapping simulation</b><br>
 <img src="./Files/images/simulation_images/Mapping.png"" width="400" height="300">
 </td>
+  
 <td align="center">
-<b>Mapping Demo</b><br>
-<a href="./Files/videos/Mapping_Videos.mp4">
-<img src="images/navigation_thumbnail.png" width="200" height="300">
-</a>
+<b>Motor Testing Demo</b><br>
+<video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
 </td>
 </tr>
 </table>
 
-```
-
-```
 
 ---
 
@@ -197,18 +191,17 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <table>
 <tr>
 <td align="center">
-<b>Navigation simulation</b><br>
-<img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="400" height="300">
+<b>Global cost map</b><br>
+<img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
 </td>
 
 <td align="center">
-<b>Navigation Demo</b><br>
-<a href="./Files/videos/robot_navigation.mp4">
-<img src="images/navigation_thumbnail.png" width="200" height="300">
-</a>
+<b>Navigation simulation</b><br>
+<video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
 </td>
 </tr>
 </table>
+
 
 # Repository Structure
 
