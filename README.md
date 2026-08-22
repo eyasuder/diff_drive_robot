@@ -84,7 +84,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <tr>
 <td align="center">
 <b>Motor Wiring</b><br>
-<img src="./Files/images/simulation_images/Wiring_diagram.png" width="400" height="300">
+<img src="./Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="300">
 </td>
 
 <td align="center">
@@ -93,7 +93,6 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 </td>
 </tr>
 </table>
-
 ---
 
 # 🧠 Software Stack
