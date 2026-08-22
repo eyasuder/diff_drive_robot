@@ -198,12 +198,12 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <tr>
 <td align="center">
 <b>Navigation simulation</b><br>
-<img src=""" width="400" height="300">
+<img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="400" height="300">
 </td>
 
 <td align="center">
 <b>Navigation Demo</b><br>
-<a href="https://github.com/user-attachments/assets/931f0364-c7a0-4952-8c7f-d5226d025a12">
+<a href="./Files/videos/robot_navigation.mp4">
 <img src="images/navigation_thumbnail.png" width="200" height="300">
 </a>
 </td>
