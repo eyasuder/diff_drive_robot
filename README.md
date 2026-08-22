@@ -26,24 +26,24 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 |Roll No.|           Component                |                 Image                                                                   |      Description   |
 |--------|------------------------------------|-----------------------------------------------------------------------------------------|--------------------|
-|    1   | Raspberry Pi 4                     | <img width="250" height="150" alt="Raspberry_pi_4" src="https://github.com/user-attachments/assets/1461957e-ee82-4077-a8de-702d60fd988e" />| Main onboard computer |
-|    2   | Arduino Mega 2560                  |  <img width="250" height="150" alt="Arduino_mega_2560" src="https://github.com/user-attachments/assets/3fe2205a-fec8-4354-97e8-073e0eb2ebe0" />| Low-level motor controller |
-|    3   | 2D LiDAR                           |  <img width="250" height="200" alt="Rplidar_a1" src="https://github.com/user-attachments/assets/18c28454-bf2a-4b05-8141-427e09944dba" />| Environment perception |
-|    4   | L298N Motor Driver                 | <img width="250" height="150" alt="L298N_motor_driver" src="https://github.com/user-attachments/assets/347fa109-fdf1-4d04-91b9-b0545e204653" />| DC motors controls |
-|    5   | DC Geared Motors (with encoders)   | <img width="250" height="150" alt="Encoder_DC_motor" src="https://github.com/user-attachments/assets/1dd8f8f5-4824-4c84-b992-e53ab67a300a" />| Two 12V 130rpm geared dc motors |
-|    6   | Caster Wheel                       | <img width="100" height="100" alt="Castor_wheel" src="https://github.com/user-attachments/assets/891c209c-a808-40c5-adf4-ad78c78cb3b9" /> | Robot support |
-|    7   | 3S LiPo Battery                    | <img width="250" height="150" alt="Lipo_battery" src="https://github.com/user-attachments/assets/cf80ed37-cf84-459b-965b-7883316b0dcb" />| 5000 mAh 11.1v 3S Lipo battery for powering the robot |
-|    8   | DC-DC Buck Converter               | <img width="250" height="250" alt="DC_to_DC_converter" src="https://github.com/user-attachments/assets/2e1bad29-4a95-48f9-ba60-7b4ab211d58c" />| High-power step-down XL4015 5A 75W variable DC converter 5v supply for electronics |
+|    1   | Raspberry Pi 4                     | <img width="250" height="150" alt="Raspberry_pi_4" src="./Files/images/hardware_components/Raspberry_pi_4.png" />| Main onboard computer |
+|    2   | Arduino Mega 2560                  |  <img width="250" height="150" alt="Arduino_mega_2560" src="./Files/images/hardware_components/Arduino_mega_2560.png" />| Low-level motor controller |
+|    3   | 2D LiDAR                           |  <img width="250" height="200" alt="Rplidar_a1" src="./Files/images/hardware_components/Rplidar_a1.png" />| Environment perception |
+|    4   | L298N Motor Driver                 | <img width="250" height="150" alt="L298N_motor_driver" src="./Files/images/hardware_components/L298N_motor_driver.png" />| DC motors controls |
+|    5   | DC Geared Motors (with encoders)   | <img width="250" height="150" alt="Encoder_DC_motor" src="./Files/images/hardware_components/Encoder_DC_motor.png" />| Two 12V 130rpm geared dc motors |
+|    6   | Caster Wheel                       | <img width="100" height="100" alt="Castor_wheel" src="./Files/images/hardware_components/Castor_wheel.png" /> | Robot support |
+|    7   | 3S LiPo Battery                    | <img width="250" height="150" alt="Lipo_battery" src="./Files/images/hardware_components/Lipo_battery.png" />| 5000 mAh 11.1v 3S Lipo battery for powering the robot |
+|    8   | DC-DC Buck Converter               | <img width="250" height="250" alt="DC_to_DC_converter" src="./Files/images/hardware_components/DC_to_DC_converter.png" />| High-power step-down XL4015 5A 75W variable DC converter 5v supply for electronics |
 |    9   | Robot Chassis                      |                                                                                         | Mechanical structure |
-|    9   |Gamepad controller                  | <img width="250" height="200" alt="Remote_controller" src="https://github.com/user-attachments/assets/cead70fe-f49a-4d31-8b58-74cfb9bdf9f7" />| Xbox Microsoft 4th generation wireless controller for remote control |
+|    9   |Gamepad controller                  | <img width="250" height="200" alt="Remote_controller" src="./Files/images/hardware_components/Remote_controller.png" />| Xbox Microsoft 4th generation wireless controller for remote control |
 
 ---
 
 ## Motor Wiring and Differential Drive Robot Hardware Platform
 
 <p align="center">
-<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/Wiring_diagram.png" />
-<img width="500" height="400" alt="Diff_Drive_robot" src="./Files/images/Diff_Drive_robot.jpg" />
+<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/simulation_images/Wiring_diagram.png" />
+<img width="400" height="400" alt="Diff_Drive_robot" src="./Files/images/hardware_components/differential_drive_robot.jpg" />
 </p>
 
 ---
@@ -84,12 +84,12 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <tr>
 <td align="center">
 <b>Motor Wiring</b><br>
-<img src=".src/diff_drive_robot/Files/images/Wiring_diagram.png"" width="400" height="300">
+<img src="./Files/images/simulation_images/Wiring_diagram.png"" width="400" height="300">
 </td>
 
 <td align="center">
 <b>Motor Testing Demo</b><br>
-<a href=".src/diff_drive_robot/Files/videos/Motor_testing.mp4">
+<a href="./Files/videos/Motor_testing.mp4">
 <img src="images/navigation_thumbnail.png" width="200" height="300">
 </a>
 </td>
