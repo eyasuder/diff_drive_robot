@@ -157,6 +157,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 - RViz2
 - Navigation2
 - SLAM Toolbox
+- Aeduino IDE
 
 ---
 
@@ -253,6 +254,13 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 </tr>
 </table>
 
+---
+
+# SLAM AND Navigation on Hardware Simulation
+
+
+
+---
 
 # Repository Structure
 
@@ -300,3 +308,13 @@ diff_robot/
         └── README.md
 
 ```
+
+# Feature works
+
+-  SLAM and Nav2 parameter Tunning
+- Sensor fusion 
+- Computer vision
+- Implementing custom motion planning and controllers
+- Chassis design using 3D model software
+
+---
