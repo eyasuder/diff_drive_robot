@@ -50,7 +50,59 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 ## Arduino mega2560 Pin Configuration
 
 - Clone motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
-- Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno.
+- Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno:
+  
+  ```bash
+  /* Interrupt routine for LEFT and RIGHT encoder, taking care of actual counting */
+  ISR (PCINT2_vect){
+  	static uint8_t left_enc_last=0;
+    static uint8_t right_enc_last=0;
+    uint8_t port_pink = PINK;
+    
+    // this is for right encoder
+	  left_enc_last <<=2; //shift previous state two places
+	  left_enc_last |= (port_pink & 0x03); //read the current state
+  
+    left_enc_pos += ENC_STATES[(left_enc_last & 0x0f)];
+  
+    // this is for right encoder
+    right_enc_last <<=2; //shift previous state two places
+    right_enc_last |= (port_pink & 0x0C) >> 2; //read the current state into lowest 2 bits
+  
+    right_enc_pos += ENC_STATES[(right_enc_last & 0x0f)];
+  }
+  ```
+   and modify the `ROSArduinoBrisge` according to:
+  
+  ```bash
+  // Initialize the motor controller if used */
+  #ifdef USE_BASE
+  #ifdef ARDUINO_ENC_COUNTER
+    //set as inputs
+    DDRK &= ~(1<<LEFT_ENC_PIN_A);
+    DDRK &= ~(1<<LEFT_ENC_PIN_B);
+    DDRK &= ~(1<<RIGHT_ENC_PIN_A);
+    DDRK &= ~(1<<RIGHT_ENC_PIN_B);
+    
+    //enable pull up resistors
+    PORTK |= (1<<LEFT_ENC_PIN_A);
+    PORTK |= (1<<LEFT_ENC_PIN_B);
+    PORTK |= (1<<RIGHT_ENC_PIN_A);
+    PORTK |= (1<<RIGHT_ENC_PIN_B);
+    
+    // tell pin change mask to listen to left encoder pins
+    PCMSK2 |= (1 << LEFT_ENC_PIN_A)|(1 << LEFT_ENC_PIN_B);
+    
+    // tell pin change mask to listen to right encoder pins
+    PCMSK2 |= (1 << RIGHT_ENC_PIN_A)|(1 << RIGHT_ENC_PIN_B);
+    
+    // enable PCINT1 and PCINT2 interrupt in the general interrupt mask
+    PCICR |= (1 << PCIE2);
+  #endif
+  initMotorController();
+  resetPID();
+  #endif
+  ```
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
   
 |           From                                               | To                    |
