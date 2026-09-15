@@ -229,7 +229,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 </td>
   
 <td align="center">
-<b>Motor Testing Demo</b><br>
+<b>Mapping</b><br>
 <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
 </td>
 </tr>
