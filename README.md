@@ -34,8 +34,8 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 |    6   | Caster Wheel                       | <img width="100" height="100" alt="Castor_wheel" src="./Files/images/hardware_components/Castor_wheel.png" /> | Robot support |
 |    7   | 3S LiPo Battery                    | <img width="250" height="150" alt="Lipo_battery" src="./Files/images/hardware_components/Lipo_battery.png" />| 5000 mAh 11.1v 3S Lipo battery for powering the robot |
 |    8   | DC-DC Buck Converter               | <img width="250" height="250" alt="DC_to_DC_converter" src="./Files/images/hardware_components/DC_to_DC_converter.png" />| High-power step-down XL4015 5A 75W variable DC converter 5v supply for electronics |
-|    9   | Robot Chassis                      |                                                                                         | Mechanical structure |
-|    9   |Gamepad controller                  | <img width="250" height="200" alt="Remote_controller" src="./Files/images/hardware_components/Remote_controller.png" />| Xbox Microsoft 4th generation wireless controller for remote control |
+|    9   | Robot Chassis                      |                                                                                         | - |
+|    10   |Gamepad controller                  | <img width="250" height="200" alt="Remote_controller" src="./Files/images/hardware_components/Remote_controller.png" />| Xbox Microsoft 4th generation wireless controller for remote control |
 
 ---
 
@@ -115,30 +115,30 @@ The project has been validated in both **Gazebo simulation** and on a **real har
   resetPID();
   #endif
   ```
-- The modified version for this project can be founded [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git)
+- The modified version for this project can be founded [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
-- The wiring diagram is given: 
+- The wiring diagram is done as follows: 
   
 |           From                                               | To                    |
 | ------------------------------------------------------------  | -----------------------|
-| Left Motor Positive terminal                                  | OUT4 L298N motor driver|
+| Left Motor Positive terminal                                  | OUT2 L298N motor driver|
 | Left Motor Encoder negative terminal                          | GND pin Arduino2560    |
 | Left Motor Encoder A phase signal feedback                    | pin A8 Arduino mega2560|
 | Left Motor Encoder B phase signal feedback                    | Pin A9 Arduino mega2560|
 | Left Motor Encoder positive terminal                          | Arduino mega2560 3V     |
-| Left Motor negative terminal                                  | OUT3 L298N motor driver|
-| Right Motor positive terminal                                 | OUT1 L298N motor driver |
-| Right Motor Encoder negative terminal                      |GND pin Arduino2560|
-| Right Motor Encoder A phase signal feedback                | Pin A11 Arduino mega2560|
-| Right Motor Encoder B phase signal feedback                | Pin A10 Arduino mega2560 |
-| Right Motor Encoder positive terminal                     | Arduino mega2560 3V|
-| Right Motor negative terminal                             |OUT2 L298N motor driver |
-| Left Motor direction (IN1, L298N motor driver)            | Pin D9 Arduino mega2560|
-| Left Motor direction (IN2, L298N motor driver)             | Pin D5 Arduino mega2560|
-| Left Motor enable   (ENA, L298N motor driver)              | Pin D12 Arduino mega2560|
-| Right Motor direction  (IN3, L298N motor driver)            |Pin D10 Arduino mega2560 |
-| Right Motor direction  (IN4, L298N motor driver)            |Pin D6 Arduino mega2560 |
-| Right Motor Enable     (ENB, L298N motor driver)            | Pin A13 Arduino mega2560|
+| Left Motor negative terminal                                  | OUT1 L298N motor driver|
+| Right Motor positive terminal                                 | OUT3 L298N motor driver |
+| Right Motor Encoder negative terminal                         |GND pin Arduino2560|
+| Right Motor Encoder A phase signal feedback                   | Pin A11 Arduino mega2560|
+| Right Motor Encoder B phase signal feedback                   | Pin A10 Arduino mega2560 |
+| Right Motor Encoder positive terminal                         | Arduino mega2560 3V|
+| Right Motor negative terminal                                 |OUT4 L298N motor driver |
+| Left Motor direction (IN1, L298N motor driver)                | Pin D9 Arduino mega2560|
+| Left Motor direction (IN2, L298N motor driver)                | Pin D5 Arduino mega2560|
+| Left Motor enable   (ENA, L298N motor driver)                 | Pin D12 Arduino mega2560|
+| Right Motor direction  (IN3, L298N motor driver)              |Pin D10 Arduino mega2560 |
+| Right Motor direction  (IN4, L298N motor driver)              |Pin D6 Arduino mega2560 |
+| Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
 
 ---
 ## Testing Motors
@@ -262,7 +262,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 </td>
 
 <td align="center">
-<b>Navigation simulation</b><br>
+<b>Robot navigation using Nav2</b><br>
 <video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
 </td>
 </tr>
@@ -327,10 +327,10 @@ diff_robot/
 
 # Feature works
 
--  SLAM and Nav2 parameter Tunning
-- Sensor fusion 
-- Computer vision
-- Implementing custom motion planning and controllers
-- Chassis design using 3D model software
+- Sensor fusion ( Wheel encoder and BNO085 9 axis IMU for odometry correction).
+- Custom Motion planning and controller implementation. 
+- Computer vision (Object tacking).
+- Chassis design using CAD softwares.
+
 
 ---
