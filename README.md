@@ -41,10 +41,22 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 ## Motor Wiring and Differential Drive Robot Hardware Platform
 
-<p align="center">
+<table>
+<tr>
+<td align="center">
+<b>Motor Wiring </b><br>
 <img width="400" height="400" alt="Wiring_diagram" src="./Files/images/simulation_images/Wiring_diagram.png" />
+<b> Differential Drive Robot</b><br>
 <img width="400" height="400" alt="Diff_Drive_robot" src="./Files/images/hardware_components/differential_drive_robot.jpg" />
-</p>
+</td>
+
+<td align="center">
+<b>Driving robot using remote control</b><br>
+<video src="https://github.com/user-attachments/assets/6dc0d2b9-f844-4d9f-a5e7-b13b71e9e8af" width="200" height="200" controls></video>
+</td>
+</tr>
+</table>
+
 
 ---
 ## Arduino mega2560 Pin Configuration
@@ -103,7 +115,9 @@ The project has been validated in both **Gazebo simulation** and on a **real har
   resetPID();
   #endif
   ```
+- The modified version for this project can be founded [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git)
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
+- The wiring diagram is given: 
   
 |           From                                               | To                    |
 | ------------------------------------------------------------  | -----------------------|
