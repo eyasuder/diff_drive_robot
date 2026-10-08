@@ -115,7 +115,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
   resetPID();
   #endif
   ```
-- The modified version for this project can be founded [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
+- The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
 - The wiring diagram is done as follows: 
   
