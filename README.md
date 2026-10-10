@@ -44,7 +44,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <table>
 <tr>
 <td align="center">
-<b>Differential drive robot </b><br>
+<b></b><br>
 <img width="400" height="400" alt="Wiring_diagram" src="./Files/images/hardware_components/Diff_robot_right.jpg" />
 <img width="400" height="400" alt="Wiring_diagram" src="./Files/images//hardware_components/Diff_robot_left.jpg" />
 </td>
