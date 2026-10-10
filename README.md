@@ -44,19 +44,17 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 <table>
 <tr>
 <td align="center">
-<b>Motor Wiring </b><br>
-<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/simulation_images/Wiring_diagram.png" />
-<b> Differential Drive Robot</b><br>
-<img width="400" height="400" alt="Diff_Drive_robot" src="./Files/images/hardware_components/differential_drive_robot.jpg" />
+<b>Differential drive robot </b><br>
+<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/hardware_components/Diff_robot_right.jpg" />
+<img width="400" height="400" alt="Wiring_diagram" src="./Files/images//hardware_components/Diff_robot_left.jpg" />
 </td>
 
 <td align="center">
-<b>Driving robot using remote control</b><br>
+<img width="400" height="400" alt="Wiring_diagram" src="./Files/images//hardware_components/Diff_robot_back.jpg" />
 <video src="https://github.com/user-attachments/assets/6dc0d2b9-f844-4d9f-a5e7-b13b71e9e8af" width="200" height="200" controls></video>
 </td>
 </tr>
 </table>
-
 
 ---
 ## Arduino mega2560 Pin Configuration
@@ -241,13 +239,15 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <table>
 <tr>
 <td align="center">
-<b>Mapping simulation</b><br>
-<img src="./Files/images/simulation_images/Mapping.png"" width="400" height="300">
+<b>Gazebo and Rviz simulations</b><br>
+<img src="./Files/images/simulation_images/Gazebo_simulation.png"" width="500" height="400">
+<img src="./Files/images/simulation_images/Rviz_simultation.png"" width="500" height="400">
 </td>
   
 <td align="center">
 <b>Mapping</b><br>
 <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
+<img src="./Files/images/simulation_images/Mapping.png"" width="500" height="400">
 </td>
 </tr>
 </table>
