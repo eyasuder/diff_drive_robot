@@ -39,7 +39,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 ---
 
-## Motor Wiring and Differential Drive Robot Hardware Platform
+## Differential Drive Robot Hardware Platform
 
 <table>
 <tr>
