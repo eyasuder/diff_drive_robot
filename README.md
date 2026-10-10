@@ -141,15 +141,18 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 | Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
 
 ---
-## Testing Motors
+## Motor Experiment
 - Upload `ROSArduinoBridge` to Arduino mega2560.
 - Clone `serial motor demo` from https://github.com/joshnewans/serial_motor_demo.
-- Run `miniterm` to test both open loop and closed loop control. For closed loop control, experimental encoder revolution per count is approximately 1975 for GJA25-375 endoder dc motor.
+- Run `miniterm` to test both open loop and closed loop control.
+- For closed loop control, experimental encoder revolution per count is approximately 1975 for GJA25-375 endoder dc motor.
 
 <table>
 <tr>
 <td align="center">
-<b>Motor Wiring</b><br>
+<b>Motor Wiring </b><br>
+<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/simulation_images/Wiring_diagram.png" />
+<b></b><br>
 <img src="./Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="300">
 </td>
 
