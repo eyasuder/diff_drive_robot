@@ -51,14 +51,10 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 
 <td align="center">
 <img width="400" height="400" alt="Wiring_diagram" src="./Files/images//hardware_components/Diff_robot_back.jpg" />
-<video src="https://github.com/user-attachments/assets/6dc0d2b9-f844-4d9f-a5e7-b13b71e9e8af" width="200" height="200" controls></video>
+<video src="https://github.com/user-attachments/assets/5a1af23a-5dcf-43fd-aae2-492f7fd122ab" width="200" height="200" controls></video>
 </td>
 </tr>
 </table>
-
-<img width="264" height="186" alt="Untitled - October 07, 2026 at 21 13 00 (1)" src="https://github.com/user-attachments/assets/2d640da1-bbbb-4237-8fbf-e4025844ed9d" />
-
-
 
 ---
 ## Arduino mega2560 Pin Configuration
@@ -266,11 +262,12 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <td align="center">
 <b>Global cost map</b><br>
 <img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
+<video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
 </td>
 
 <td align="center">
-<b>Robot navigation using Nav2</b><br>
-<video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
+<video src="https://github.com/user-attachments/assets/3962f8b8-645d-402b-b86f-6dca71b6336d" width="200" height="200" controls></video>
+<video src="https://github.com/user-attachments/assets/11b53332-b588-49ed-924d-598235bc7554" width="200" height="200" controls></video>
 </td>
 </tr>
 </table>
