@@ -56,6 +56,10 @@ The project has been validated in both **Gazebo simulation** and on a **real har
 </tr>
 </table>
 
+<img width="264" height="186" alt="Untitled - October 07, 2026 at 21 13 00 (1)" src="https://github.com/user-attachments/assets/2d640da1-bbbb-4237-8fbf-e4025844ed9d" />
+
+
+
 ---
 ## Arduino mega2560 Pin Configuration
 
