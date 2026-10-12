@@ -274,11 +274,42 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 ---
 
-# To Do List
-- SLAM
-- Autonomous navigation on real robot using Nav2
+# Real Robot Experiment 
+## Mapping using SLAM toolbox
+<table>
+<tr>
+<td align="center">
+<b>Gazebo and Rviz simulations</b><br>
+<img src="./Files/images/simulation_images/Gazebo_simulation.png"" width="500" height="400">
+<img src="./Files/images/simulation_images/Rviz_simultation.png"" width="500" height="400">
+</td>
+  
+<td align="center">
+<b>Mapping</b><br>
+<video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
+<img src="./Files/images/simulation_images/Mapping.png"" width="500" height="400">
+</td>
+</tr>
+</table>
 
 
+---
+## Autonomous navigation on real robot using Nav2
+
+<table>
+<tr>
+<td align="center">
+<b>Global cost map</b><br>
+<img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
+<video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
+</td>
+
+<td align="center">
+<video src="https://github.com/user-attachments/assets/3962f8b8-645d-402b-b86f-6dca71b6336d" width="200" height="200" controls></video>
+<video src="https://github.com/user-attachments/assets/11b53332-b588-49ed-924d-598235bc7554" width="200" height="200" controls></video>
+</td>
+</tr>
+</table>
 
 ---
 
