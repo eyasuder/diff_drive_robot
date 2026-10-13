@@ -314,47 +314,45 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 # Repository Structure
 
 ```
-diff_robot/
-├── src/
-    ├── diff_drive_robot/
-        ├── config/
-        │   ├── controller.yaml
-        │   ├── gz_bridge.yaml
-        │   ├── joystick.yaml
-        │   ├── mapper_params_online_async.yaml
-        │   ├── nav2_params.yaml
-        │   ├── twist_mux.yaml
-        │   └── *.rviz
-        │
-        ├── launch/
-        │   ├── sim.launch.py
-        │   ├── online_async_launch.py
-        │   ├── localization_launch.py
-        │   ├── navigation_launch.py
-        │   ├── rplidar.launch.py
-        │   └── joystick_controller.launch.py
-        │
-        ├── robot_urdf_description/
-        │   ├── robot_main_urdf.xacro
-        │   ├── robot_description.xacro
-        │   ├── ros2_control.xacro
-        │   ├── gazebo_control.xacro
-        │   ├── wheel_macro.xacro
-        │   ├── lidar_sensor.xacro
-        │   ├── camera_sensor.xacro
-        │   ├── depth_camera.xacro
-        │   └── inertia.xacro
-        │
-        ├── worlds/
-        │   ├── warehouse_world.sdf
-        │   ├── ware_sample.sdf
-        │   ├── ware1_sample.sdf
-        │   ├── demo_world_fortress.sdf
-        │   └── ...
-        │
-        ├── CMakeLists.txt
-        ├── package.xml
-        └── README.md
+diff_drive_robot/
+	├── config/
+	│   ├── controller.yaml
+	│   ├── gz_bridge.yaml
+	│   ├── joystick.yaml
+	│   ├── mapper_params_online_async.yaml
+	│   ├── nav2_params.yaml
+	│   ├── twist_mux.yaml
+	│   └── *.rviz
+	│
+	├── launch/
+	│   ├── sim.launch.py
+	│   ├── online_async_launch.py
+	│   ├── localization_launch.py
+	│   ├── navigation_launch.py
+	│   ├── rplidar.launch.py
+	│   └── joystick_controller.launch.py
+	│
+	├── robot_urdf_description/
+	│   ├── robot_main_urdf.xacro
+	│   ├── robot_description.xacro
+	│   ├── ros2_control.xacro
+	│   ├── gazebo_control.xacro
+	│   ├── wheel_macro.xacro
+	│   ├── lidar_sensor.xacro
+	│   ├── camera_sensor.xacro
+	│   ├── depth_camera.xacro
+	│   └── inertia.xacro
+	│
+	├── worlds/
+	│   ├── warehouse_world.sdf
+	│   ├── ware_sample.sdf
+	│   ├── ware1_sample.sdf
+	│   ├── demo_world_fortress.sdf
+	│   └── ...
+	│
+	├── CMakeLists.txt
+	├── package.xml
+	└── README.md
 
 ```
 
