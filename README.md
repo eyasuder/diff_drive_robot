@@ -175,7 +175,7 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 
 ---
 
-# Installation
+# ⚙️ Installation
 
 - Install `ROS2 Humble` and `Gazebo fortress` (Gazebo Ignition)
 - Clone the repository
@@ -196,7 +196,7 @@ source install/setup.bash
 
 ---
 
-# Running the Project
+# 🚀 Running the Project
 
 ## 1. Launch Gazebo Simulation
 
@@ -233,7 +233,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 ---
 # Results
 
-## Mapping
+## 🗺️ Mapping
 
 <table>
 <tr>
@@ -254,7 +254,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 ---
 
-## Navigation
+## 🧭 Navigation
 
 <table>
 <tr>
