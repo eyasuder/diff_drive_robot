@@ -8,7 +8,7 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 ---
 
 ## Project Features:
-- ROS2 Humble-basedd differential drive robot simulation.
+- ROS2 Humble-based differential drive robot simulation.
 - URDF/Xacro robot description.
 - 2D LiDAR integration, Camera and Depth Camera integration.
 - SLAM using SLAM Toolbox.
