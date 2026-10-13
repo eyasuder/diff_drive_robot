@@ -1,22 +1,21 @@
-# 2D LiDAR-Based SLAM and Navigation2 for a Differential Drive Robot
+# 2D LiDAR-Based SLAM and Navigation for a Differential Drive Robot
 
 ## 📌 Overview
 
-This repository contains autonomous navigation of a differential drive mobile robot using **ROS 2 Humble**. The robot uses a **2D LiDAR (Slamtec RPLIDAR A1)** for Simultaneous Localization and Mapping (SLAM) and **Navigation2 (Nav2)** for localization, path planning, obstacle avoidance, and autonomous navigation.
-The project has been validated in both **Gazebo simulation** and on a **real hardware platform**. 
+This repository implements autonomous navigation of a differential drive mobile robot using **ROS 2 Humble**. The project leverages a **2D LiDAR (Slamtec RPLIDAR A1)** for simultaneous localization and mapping (SLAM) and **Navigation2 (Nav2)** for path planning, obstacle avoidance, and autonomous navigation. Additionally, it integrates a standard camera and depth camera for visual SLAM and object tracking.
+The project is fully validated in both **Gazebo simulation** and on a **real-world hardware platform**. 
 
 ---
 
 ## Project Features:
-- Differential drive robot
-- ROS 2 Humble
-- URDF/Xacro robot description
-- 2D LiDAR integration, Camera and Depth Camera
-- SLAM using SLAM Toolbox
-- Autonomous navigation using Navigation2
-- Obstacle avoidance
-- Gazebo Fortress simulation
-- Real robot implementation
+- ROS2 Humble-basedd differential drive robot simulation.
+- URDF/Xacro robot description.
+- 2D LiDAR integration, Camera and Depth Camera integration.
+- SLAM using SLAM Toolbox.
+- Autonomous navigation using Navigation2.
+- Obstacle avoidance, and object detection.
+- Gazebo Fortress simulation.
+- Real robot implementation.
   
 ---
 
@@ -285,7 +284,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 	
 <td align="center">
 <b>Map</b><br>
-<img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
+<img src="./Files/images/simulation_images/Room_mapping.png"" width="600" height="600">
 </td>
 </tr>
 </table>
