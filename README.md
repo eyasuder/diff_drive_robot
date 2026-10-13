@@ -82,7 +82,7 @@ The project has been validated in both **Gazebo simulation** and on a **real har
     right_enc_pos += ENC_STATES[(right_enc_last & 0x0f)];
   }
   ```
-   and modify the `ROSArduinoBrisge` according to:
+   and also, modify the `ROSArduinoBridge`:
   
   ```bash
   // Initialize the motor controller if used */
@@ -298,16 +298,19 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <tr>
 <td align="center">
 <b>Global cost map</b><br>
-<img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
-<video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
+<video src="https://github.com/user-attachments/assets/0adb078e-eddb-4591-8b14-67df9b7cd595" width="200" height="200" controls></video>
 </td>
 
 <td align="center">
-<video src="https://github.com/user-attachments/assets/3962f8b8-645d-402b-b86f-6dca71b6336d" width="200" height="200" controls></video>
-<video src="https://github.com/user-attachments/assets/11b53332-b588-49ed-924d-598235bc7554" width="200" height="200" controls></video>
+<video src="https://github.com/user-attachments/assets/7e6ebb20-3414-49c0-9dde-ae4a87fb753e" width="200" height="200" controls></video>
 </td>
 </tr>
 </table>
+
+
+
+
+
 
 ---
 
