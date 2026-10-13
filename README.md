@@ -1,4 +1,4 @@
-# 2D LiDAR-Based SLAM and Navigation for a Differential Drive Robot
+# 2D LiDAR-Based Autonomous Navigation of a Differential Drive Robot
 
 ## 📌 Overview
 
