@@ -278,7 +278,6 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <table>
 <tr>
 <td align="center">
-<b>Mapping</b><br>
 <video src="https://github.com/user-attachments/assets/c9f206b4-4b04-4274-a6d6-8404f87407d6" width="200" height="300" controls></video>
 </td>
 	
@@ -296,7 +295,6 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <table>
 <tr>
 <td align="center">
-<b>Global cost map</b><br>
 <video src="https://github.com/user-attachments/assets/0adb078e-eddb-4591-8b14-67df9b7cd595" width="200" height="200" controls></video>
 </td>
 
