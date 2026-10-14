@@ -348,7 +348,7 @@ diff_drive_robot/
 	│   ├── ware_sample.sdf
 	│   ├── ware1_sample.sdf
 	│   ├── demo_world_fortress.sdf
-	│   └── ...
+	│   
 	│
 	├── CMakeLists.txt
 	├── package.xml
