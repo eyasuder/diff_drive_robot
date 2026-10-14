@@ -171,14 +171,14 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 - RViz2
 - Navigation2
 - SLAM Toolbox
-- Aeduino IDE
+- Arduino IDE
 
 ---
 
 # ⚙️ Installation
 
 - Install `ROS2 Humble` and `Gazebo fortress` (Gazebo Ignition)
-- Clone the repository
+- Create workspace and clone the repository
 
 ```bash
 https://github.com/eyasuder/diff_drive_robot.git
@@ -187,7 +187,7 @@ https://github.com/eyasuder/diff_drive_robot.git
 - Build the workspace
 
 ```bash
-cd diff_drive
+cd ~/workspace
 
 colcon build --symlink-install
 
