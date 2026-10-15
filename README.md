@@ -361,7 +361,7 @@ diff_drive_robot/
 - Sensor fusion ( Wheel encoder and BNO085 9 axis IMU for odometry correction).
 - Custom Motion planning and controller implementation. 
 - Computer vision (Object tacking).
-- Chassis design using CAD softwares.
+- Design using CAD softwares.
 - Scale it for mobile manipulations.
 
 
