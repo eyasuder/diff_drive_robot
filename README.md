@@ -362,6 +362,7 @@ diff_drive_robot/
 - Custom Motion planning and controller implementation. 
 - Computer vision (Object tacking).
 - Chassis design using CAD softwares.
+- Scale it for mobile manipulations.
 
 
 ---
