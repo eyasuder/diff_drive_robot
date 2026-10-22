@@ -364,5 +364,6 @@ diff_drive_robot/
 - Design using CAD softwares.
 - Scale it for mobile manipulations.
 
-
 ---
+## Author
+Eyasu Derbew
