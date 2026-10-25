@@ -99,10 +99,10 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
     PORTK |= (1<<RIGHT_ENC_PIN_A);
     PORTK |= (1<<RIGHT_ENC_PIN_B);
     
-    // tell pin change mask to listen to left encoder pins
+    // pin change mask to listen to left encoder pins
     PCMSK2 |= (1 << LEFT_ENC_PIN_A)|(1 << LEFT_ENC_PIN_B);
     
-    // tell pin change mask to listen to right encoder pins
+    // pin change mask to listen to right encoder pins
     PCMSK2 |= (1 << RIGHT_ENC_PIN_A)|(1 << RIGHT_ENC_PIN_B);
     
     // enable PCINT1 and PCINT2 interrupt in the general interrupt mask
