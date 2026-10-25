@@ -358,9 +358,9 @@ diff_drive_robot/
 
 # Feature works
 
-- Sensor fusion ( Wheel encoder and BNO085 9 axis IMU for odometry correction).
+- Sensor fusion ( Wheel encoder and IMU for odometry correction).
 - Custom Motion planning and controller implementation. 
-- Computer vision (Object tacking).
+- Computer vision.
 - Design using CAD softwares.
 - Scale it for mobile manipulations.
 
