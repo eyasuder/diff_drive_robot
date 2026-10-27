@@ -51,8 +51,13 @@ def generate_launch_description():
                                    '-name', 'my_bot',
                                    '-z', '0.1'],
                         output='screen')
-    
 
+    spawn_imu_broadcaster= Node(
+            package= "controller_manager",
+            executable="spawner",
+            arguments=["imu_sensor_broadcaster"],)
+
+    
     diff_drive_spawner= Node(
         package= "controller_manager",
         executable="spawner",
@@ -102,6 +107,7 @@ def generate_launch_description():
         world_arg,
         gazebo,
         spawn_entity,
+        spawn_imu_broadcaster,
         diff_drive_spawner,
         joint_broad_spawner,
         ros_gz_bridge,
