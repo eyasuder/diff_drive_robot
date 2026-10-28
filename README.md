@@ -25,14 +25,14 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 
 |Roll No.|           Component                |                 Image                                                                   |      Description   |
 |--------|------------------------------------|-----------------------------------------------------------------------------------------|--------------------|
-|    1   | Raspberry Pi 4                     | <img width="250" height="150" alt="Raspberry_pi_4" src="./Files/images/hardware_components/Raspberry_pi_4.png" />| Main onboard computer |
-|    2   | Arduino Mega 2560                  |  <img width="250" height="150" alt="Arduino_mega_2560" src="./Files/images/hardware_components/Arduino_mega_2560.png" />| Low-level motor controller |
-|    3   | 2D LiDAR                           |  <img width="250" height="200" alt="Rplidar_a1" src="./Files/images/hardware_components/Rplidar_a1.png" />| Environment perception |
-|    4   | L298N Motor Driver                 | <img width="250" height="150" alt="L298N_motor_driver" src="./Files/images/hardware_components/L298N_motor_driver.png" />| DC motors controls |
-|    5   | DC Geared Motors (with encoders)   | <img width="250" height="150" alt="Encoder_DC_motor" src="./Files/images/hardware_components/Encoder_DC_motor.png" />| Two 12V 130rpm geared dc motors |
-|    6   | Caster Wheel                       | <img width="100" height="100" alt="Castor_wheel" src="./Files/images/hardware_components/Castor_wheel.png" /> | Robot support |
-|    7   | 3S LiPo Battery                    | <img width="250" height="150" alt="Lipo_battery" src="./Files/images/hardware_components/Lipo_battery.png" />| 5000 mAh 11.1v 3S Lipo battery for powering the robot |
-|    8   | DC-DC Buck Converter               | <img width="250" height="250" alt="DC_to_DC_converter" src="./Files/images/hardware_components/DC_to_DC_converter.png" />| High-power step-down XL4015 5A 75W variable DC converter 5v supply for electronics |
+|    1   | Raspberry Pi 4                     | <img width="250" height="150" alt="Raspberry_pi_4" src="./src/diff_drive_robot/Files/images/hardware_components/Raspberry_pi_4.png" />| Main onboard computer |
+|    2   | Arduino Mega 2560                  |  <img width="250" height="150" alt="Arduino_mega_2560" src="./src/diff_drive_robot/Files/images/hardware_components/Arduino_mega_2560.png" />| Low-level motor controller |
+|    3   | 2D LiDAR                           |  <img width="250" height="200" alt="Rplidar_a1" src="./src/diff_drive_robot/Files/images/hardware_components/Rplidar_a1.png" />| Environment perception |
+|    4   | L298N Motor Driver                 | <img width="250" height="150" alt="L298N_motor_driver" src="./src/diff_drive_robot/Files/images/hardware_components/L298N_motor_driver.png" />| DC motors controls |
+|    5   | DC Geared Motors (with encoders)   | <img width="250" height="150" alt="Encoder_DC_motor" src="./src/diff_drive_robot/Files/images/hardware_components/Encoder_DC_motor.png" />| Two 12V 130rpm geared dc motors |
+|    6   | Caster Wheel                       | <img width="100" height="100" alt="Castor_wheel" src="./src/diff_drive_robot/Files/images/hardware_components/Castor_wheel.png" /> | Robot support |
+|    7   | 3S LiPo Battery                    | <img width="250" height="150" alt="Lipo_battery" src="./src/diff_drive_robot/Files/images/hardware_components/Lipo_battery.png" />| 5000 mAh 11.1v 3S Lipo battery for powering the robot |
+|    8   | DC-DC Buck Converter               | <img width="250" height="250" alt="DC_to_DC_converter" src="./src/diff_drive_robot/Files/images/hardware_components/DC_to_DC_converter.png" />| High-power step-down XL4015 5A 75W variable DC converter 5v supply for electronics |
 |    9   | Robot Chassis                      |                                                                                         | - |
 |    10   |Gamepad controller                  | <img width="250" height="200" alt="Remote_controller" src="./Files/images/hardware_components/Remote_controller.png" />| Xbox Microsoft 4th generation wireless controller for remote control |
 
@@ -44,12 +44,12 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 <tr>
 <td align="center">
 <b></b><br>
-<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/hardware_components/Diff_robot_right.jpg" />
-<img width="400" height="400" alt="Wiring_diagram" src="./Files/images//hardware_components/Diff_robot_left.jpg" />
+<img width="400" height="400" alt="Wiring_diagram" src="./src/diff_drive_robot/Files/images/hardware_components/Diff_robot_right.jpg" />
+<img width="400" height="400" alt="Wiring_diagram" src="./src/diff_drive_robot/Files/images//hardware_components/Diff_robot_left.jpg" />
 </td>
 
 <td align="center">
-<img width="400" height="400" alt="Wiring_diagram" src="./Files/images//hardware_components/Diff_robot_back.jpg" />
+<img width="400" height="400" alt="Wiring_diagram" src="./src/diff_drive_robot/Files/images//hardware_components/Diff_robot_back.jpg" />
 <video src="https://github.com/user-attachments/assets/5a1af23a-5dcf-43fd-aae2-492f7fd122ab" width="200" height="200" controls></video>
 </td>
 </tr>
@@ -148,9 +148,9 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 <tr>
 <td align="center">
 <b>Motor Wiring </b><br>
-<img width="400" height="400" alt="Wiring_diagram" src="./Files/images/simulation_images/Wiring_diagram.png" />
+<img width="400" height="400" alt="Wiring_diagram" src="./src/diff_drive_robot/Files/images/simulation_images/Wiring_diagram.png" />
 <b></b><br>
-<img src="./Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="300">
+<img src="./src/diff_drive_robot/Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="300">
 </td>
 
 <td align="center">
@@ -239,14 +239,14 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <tr>
 <td align="center">
 <b>Gazebo and Rviz simulations</b><br>
-<img src="./Files/images/simulation_images/Gazebo_simulation.png"" width="500" height="400">
-<img src="./Files/images/simulation_images/Rviz_simultation.png"" width="500" height="400">
+<img src="./src/diff_drive_robot/Files/images/simulation_images/Gazebo_simulation.png"" width="500" height="400">
+<img src="./src/diff_drive_robot/Files/images/simulation_images/Rviz_simultation.png"" width="500" height="400">
 </td>
   
 <td align="center">
 <b>Mapping</b><br>
 <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
-<img src="./Files/images/simulation_images/Map.png"" width="500" height="300">
+<img src="./src/diff_drive_robot/Files/images/simulation_images/Map.png"" width="500" height="300">
 </td>
 </tr>
 </table>
@@ -260,7 +260,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <tr>
 <td align="center">
 <b>Global cost map</b><br>
-<img src="./Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
+<img src="./src/diff_drive_robot/Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
 <video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
 </td>
 
@@ -283,7 +283,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 	
 <td align="center">
 <b>Map</b><br>
-<img src="./Files/images/simulation_images/Room_mapping.png"" width="600" height="600">
+<img src="./src/diff_drive_robot/Files/images/simulation_images/Room_mapping.png"" width="600" height="600">
 </td>
 </tr>
 </table>
