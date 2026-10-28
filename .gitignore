@@ -2,7 +2,7 @@
 /build/
 /install/
 /log/
-
+/simulation_files
 # Python cache
 __pycache__/
 *.py[cod]
@@ -25,3 +25,7 @@ Thumbs.db
 *.tmp
 *.swp
 *~
+*.data
+*.gpm
+*.yaml
+*.png
