@@ -34,7 +34,7 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 |    7   | 3S LiPo Battery                    | <img width="250" height="150" alt="Lipo_battery" src="./src/diff_drive_robot/Files/images/hardware_components/Lipo_battery.png" />| 5000 mAh 11.1v 3S Lipo battery for powering the robot |
 |    8   | DC-DC Buck Converter               | <img width="250" height="250" alt="DC_to_DC_converter" src="./src/diff_drive_robot/Files/images/hardware_components/DC_to_DC_converter.png" />| High-power step-down XL4015 5A 75W variable DC converter 5v supply for electronics |
 |    9   | Robot Chassis                      |                                                                                         | - |
-|    10   |Gamepad controller                  | <img width="250" height="200" alt="Remote_controller" src="./Files/images/hardware_components/Remote_controller.png" />| Xbox Microsoft 4th generation wireless controller for remote control |
+|    10   |Gamepad controller                  | <img width="250" height="200" alt="Remote_controller" src="./src/diff_drive_robot/Files/images/hardware_components/Remote_controller.png" />| Xbox Microsoft 4th generation wireless controller for remote control |
 
 ---
 
