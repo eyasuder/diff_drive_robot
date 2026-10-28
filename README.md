@@ -314,45 +314,63 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 # Repository Structure
 
 ```
-diff_drive_robot/
-	├── config/
-	│   ├── controller.yaml
-	│   ├── gz_bridge.yaml
-	│   ├── joystick.yaml
-	│   ├── mapper_params_online_async.yaml
-	│   ├── nav2_params.yaml
-	│   ├── twist_mux.yaml
-	│   └── *.rviz
-	│
-	├── launch/
-	│   ├── sim.launch.py
-	│   ├── online_async_launch.py
-	│   ├── localization_launch.py
-	│   ├── navigation_launch.py
-	│   ├── rplidar.launch.py
-	│   └── joystick_controller.launch.py
-	│
-	├── robot_urdf_description/
-	│   ├── robot_main_urdf.xacro
-	│   ├── robot_description.xacro
-	│   ├── ros2_control.xacro
-	│   ├── gazebo_control.xacro
-	│   ├── wheel_macro.xacro
-	│   ├── lidar_sensor.xacro
-	│   ├── camera_sensor.xacro
-	│   ├── depth_camera.xacro
-	│   └── inertia.xacro
-	│
-	├── worlds/
-	│   ├── warehouse_world.sdf
-	│   ├── ware_sample.sdf
-	│   ├── ware1_sample.sdf
-	│   ├── demo_world_fortress.sdf
-	│   
-	│
-	├── CMakeLists.txt
-	├── package.xml
-	└── README.md
+src
+    ├── bno08x-ros2-driver
+    ├── diffdrive_arduino
+    ├── diff_drive_robot
+    │   ├── CMakeLists.txt
+    │   ├── config
+    │   │   ├── controller.yaml
+    │   │   ├── diff_robot_slam.config.rviz
+    │   │   ├── ekf.yaml
+    │   │   ├── gz_bridge.yaml
+    │   │   ├── joystick.yaml
+    │   │   ├── lidar_scan.rviz
+    │   │   ├── mapper_params_online_async.yaml
+    │   │   ├── nav2_params.yaml
+    │   │   ├── robot_drive.rviz
+    │   │   ├── robot.rviz
+    │   │   ├── slam_mapping.rviz
+    │   │   ├── slam.rviz
+    │   │   └── twist_mux.yaml
+    │   ├── Files
+    │   │   ├── images
+    │   │   └── videos
+    │   ├── .gitignore
+    │   ├── launch
+    │   │   ├── ekf.launch.py
+    │   │   ├── joystick_controller.launch.py
+    │   │   ├── localization_launch.py
+    │   │   ├── my_launch.py
+    │   │   ├── navigation_launch.py
+    │   │   ├── online_async_launch.py
+    │   │   ├── rplidar.launch.py
+    │   │   └── sim.launch.py
+    │   ├── package.xml
+    │   ├── README.md
+    │   ├── robot_urdf_description
+    │   │   ├── camera_sensor.xacro
+    │   │   ├── depth_camera.xacro
+    │   │   ├── gazebo_control.xacro
+    │   │   ├── imu.xacro
+    │   │   ├── inertia.xacro
+    │   │   ├── lidar_sensor.xacro
+    │   │   ├── robot_description.xacro
+    │   │   ├── robot_main_urdf.xacro
+    │   │   ├── ros2_control.xacro
+    │   │   └── wheel_macro.xacro
+    │   └── worlds
+    │       ├── demo_world_fortress.sdf
+    │       ├── empty.world
+    │       ├── gazebo_lidarSensor2
+    │       ├── gazebo_lidarSensor.world
+    │       ├── laser.world
+    │       ├── obstacle
+    │       ├── wall_obstacle.world
+    │       ├── ware1_sample.sdf
+    │       ├── warehouse_world.sdf
+    │       └── ware_sample.sdf    
+    └── serial_motor_demo
 
 ```
 
