@@ -1,0 +1,16 @@
+odom_covariance_node:
+  ros__parameters:
+    input_topic: /diff_cont/odom
+    output_topic: /odom_with_covariance
+    pose_var_x: 0.05
+    pose_var_y: 0.05
+    pose_var_z: 1000000.0
+    pose_var_roll: 1000000.0
+    pose_var_pitch: 1000000.0
+    pose_var_yaw: 0.05
+    twist_var_vx: 0.02
+    twist_var_vy: 1000000.0
+    twist_var_vz: 1000000.0
+    twist_var_vroll: 1000000.0
+    twist_var_vpitch: 1000000.0
+    twist_var_vyaw: 0.02
