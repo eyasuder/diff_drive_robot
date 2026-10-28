@@ -1,0 +1,55 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 30
+    use_sim_time: true
+
+    diff_cont:
+      type: diff_drive_controller/DiffDriveController
+    joint_broad:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    imu_sensor_broadcaster:
+      type: imu_sensor_broadcaster/ImuSensorBroadcaster
+
+diff_cont:
+  ros__parameters:
+    pose_covariance_diagonal: [0.001, 0.001, 0.0, 0.0, 0.0, 0.03]
+    twist_covariance_diagonal: [0.001, 0.001, 0.0, 0.0, 0.0, 0.03]
+    publish_rate: 50.0
+    base_frame_id: base_link
+    enable_odom_tf: false
+    left_wheel_names: ["left_wheel_joint"]
+    right_wheel_names: ["right_wheel_joint"]
+    wheel_separation: 0.195
+    wheel_radius: 0.0325
+    use_stamped_vel: false
+
+
+# 2. IMU SENSOR BROADCASTER CONFIG
+# ==========================================
+imu_sensor_broadcaster:
+  ros__parameters:
+    # Must match the sensor interface name in the <ros2_control> URDF section
+    sensor_name: "imu_link"
+    frame_id: "imu_link"
+
+    # Orientation covariance (3x3 matrix, row-major order)
+    static_covariance_orientation:
+      [0.001, 0.0, 0.0,
+       0.0, 0.001, 0.0,
+       0.0, 0.0, 0.001]
+
+    # Angular velocity covariance (3x3 matrix, row-major order)
+    static_covariance_angular_velocity:
+      [0.001, 0.0, 0.0,
+       0.0, 0.001, 0.0,
+       0.0, 0.0, 0.001]
+
+    # Linear acceleration covariance (3x3 matrix, row-major order)
+    static_covariance_linear_acceleration:
+      [0.01, 0.0, 0.0,
+       0.0, 0.01, 0.0,
+       0.0, 0.0, 0.01]
+
+
+   
