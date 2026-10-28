@@ -1,8 +1,27 @@
-build/
-install/
-log/
-*.pyc
-*.swp
-.DS_Store
+# ROS 2 build outputs
+/build/
+/install/
+/log/
 
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# IDE settings
 .vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# ROS 2 and Gazebo generated files
+*.bag
+*.db3
+*.mcap
+
+# Temporary files
+*.tmp
+*.swp
+*~
