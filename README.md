@@ -177,7 +177,7 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation
 1. Open terminal and Install the required tools:
 ```bash
 sudo apt update
@@ -194,13 +194,13 @@ clone the repository
 ```bash
 git clone https://github.com/eyasuder/diff_drive_robot.git
 ```
-4. Install package dependecies
+4. Install package dependecies:
 ```bash
 cd ~/diff_ws
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
-5. Build the workspace
+5. Build the workspace:
 Source ROS2 Humble:
 ```bash
 source /opt/ros/humble/setup.bash
@@ -213,30 +213,35 @@ source ~/diff_ws/install/setup.bash
 
 ---
 
-# 🚀 Running the Project
+## 🚀 Running the Project
+1. Launch the project:
 ```bash
-#1. Launch 
-
 ros2 launch diff_drive_robot sim.launch.py
-
-#2. Start SLAM
-
+```
+2. Launch SLAM `online_async_launch.py` and provide the path to `slam parameter file` and set `use_sim_time` to `true`:
+```bash
 ros2 launch diff_drive_robot online_async_launch.py slam_params_file:=./src/diff_drive_robot/config/mapper_params_online_async.yaml use_sim_time:=true
+```
+3. Open another terminal and source it, and launch joystick controller launch file for remote control:
+```bash
+ros2 launch diff_drive_robot joystick_controller.launch.py
+```
+4. Create map and save it:
+```bash
+ros2 run nav2_map_server map_saver_cli -f map_name
+```
+The following steps are for robot localization and autonomous navigation using the created map.
 
-#3. Save the Map
-
-ros2 run nav2_map_server map_saver_cli -f my_map
-
-#4. Launch AMCL (Adaptive Monte Carlo Localization)
-
+5. Launch AMCL (Adaptive Monte Carlo Localization) and provide the path to the save map and set `use_sim_time` to `true`:
+```bash
 ros2 launch diff_drive_robot localization_launch.py map:=./path/to/saved/map use_sim_time:=true
-
-#5.  Launch Nav2
-
+```
+6.  Launch Nav2 `navigation_launch.py` and set `use_sim_time` and `map_subscribe_transient_local` to `true`:
+```bash
 ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
 ```
 ---
-# Results
+# Simulation Results
 
 ## 🗺️ Mapping
 
