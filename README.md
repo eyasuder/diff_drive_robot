@@ -197,39 +197,27 @@ source install/setup.bash
 ---
 
 # 🚀 Running the Project
-
-## 1. Launch Gazebo Simulation
-
 ```bash
+#1. Launch Gazebo Simulation
+
 ros2 launch diff_drive_robot sim.launch.py
-```
 
----
+#2. Start SLAM
 
-## 2. Start SLAM
-
-```bash
 ros2 launch diff_drive_robot online_async_launch.py slam_params_file:=./src/diff_drive_robot/config/mapper_params_online_async.yaml use_sim_time:=true
-```
 
----
+#3. Save the Map
 
-## 3. Save the Map
-
-```bash
 ros2 run nav2_map_server map_saver_cli -f my_map
-```
-## 4. Launch AMCL (Adaptive Monte Carlo Localization)
 
-```bash
+#4. Launch AMCL (Adaptive Monte Carlo Localization)
+
 ros2 launch diff_drive_robot localization_launch.py map:=./path/to/saved/map use_sim_time:=true
-```
-## 5.  Launch Nav2
 
-```bash
+#5.  Launch Nav2
+
 ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
 ```
-
 ---
 # Results
 
