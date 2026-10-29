@@ -183,26 +183,38 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 sudo apt update
 sudo apt install git python3-colcon-common-extensions python3-rosdep
 ```
+2. Make sure `ROS2 Humble` and `Gazebo Fortress (Ignition)` are installed.
+3. Clone the repository
+Create workspace 
 ```bash
-# Make sure `ROS2 Hummble` and `Gazebo Fortress (Ignition)
-2# Create workspace and clone the repository:
-
- https://github.com/eyasuder/diff_drive_robot.git
-
-3# Build the workspace
-
-cd ~/workspace
-
+mdkir -p ~/diff_ws/src
+cd ~/diff_ws/src
+```
+clone the repository
+```bash
+git clone https://github.com/eyasuder/diff_drive_robot.git
+```
+4. Install package dependecies
+```bash
+cd ~/diff_ws
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+```
+5. Build the workspace
+Source ROS2 Humble:
+```bash
+source /opt/ros/humble/setup.bash
+```
+Then build and source it:
+```bash
 colcon build --symlink-install
-
-source install/setup.bash
+source ~/diff_ws/install/setup.bash
 ```
 
 ---
 
 # 🚀 Running the Project
 ```bash
-1# Open terminal and source the works
 #1. Launch 
 
 ros2 launch diff_drive_robot sim.launch.py
