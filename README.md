@@ -139,9 +139,11 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 
 ---
 ## Motor Experiment
-- Upload `ROSArduinoBridge` to Arduino mega2560.
+This is to determined the encoder counts per revolution (CPR) of the dc motor and ensure that the encoder reading are persistent with their corresponding motors.  
+- Upload [`ROSArduinoBridge`]( https://github.com/eyasuder/ros_arduino_bridge) to Arduino mega2560.
 - Clone `serial motor demo` from https://github.com/joshnewans/serial_motor_demo.
-- Run `miniterm` to test both open loop and closed loop control.
+- Install python pySerial using `sudo apt update && sudo apt install python3-serial` .
+- Run `python3 -m serial.tools.miniterm /dev/tty* 115200` (change the serial device path and baud-rate according to your setting) to test both open loop and closed loop control.
 - For closed loop control, experimental encoder revolution per count is approximately 1975 for GJA25-375 endoder dc motor.
 
 <table>
@@ -176,17 +178,19 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 ---
 
 # ⚙️ Installation
-
-- Install `ROS2 Humble` and `Gazebo fortress` (Gazebo Ignition)
-- Create workspace and clone the repository
-
+1. Open terminal and Install the required tools:
 ```bash
-https://github.com/eyasuder/diff_drive_robot.git
+sudo apt update
+sudo apt install git python3-colcon-common-extensions python3-rosdep
 ```
-
-- Build the workspace
-
 ```bash
+# Make sure `ROS2 Hummble` and `Gazebo Fortress (Ignition)
+2# Create workspace and clone the repository:
+
+ https://github.com/eyasuder/diff_drive_robot.git
+
+3# Build the workspace
+
 cd ~/workspace
 
 colcon build --symlink-install
@@ -198,7 +202,8 @@ source install/setup.bash
 
 # 🚀 Running the Project
 ```bash
-#1. Launch Gazebo Simulation
+1# Open terminal and source the works
+#1. Launch 
 
 ros2 launch diff_drive_robot sim.launch.py
 
