@@ -376,7 +376,7 @@ src
 
 ```
 
-## Feature works
+## Future works
 
 - Sensor fusion ( Wheel encoder and IMU for odometry correction).
 - Custom Motion planning and controller implementation. 
