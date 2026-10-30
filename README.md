@@ -138,7 +138,7 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 - Upload [`ROSArduinoBridge`]( https://github.com/eyasuder/ros_arduino_bridge) to Arduino mega2560.
 - Clone `serial motor demo` from https://github.com/joshnewans/serial_motor_demo.
 - Install python pySerial using `sudo apt update && sudo apt install python3-serial` .
-- Run `python3 -m serial.tools.miniterm /dev/tty* 115200` (change the serial device path and baud-rate according to your setting) to test both open loop and closed loop control.
+- Run `python3 -m serial.tools.miniterm /dev/tty* $baudrate` (set serial device path and baud-rate) to test both open loop and closed loop control.
 - For closed loop control, experimental encoder revolution per count is approximately 1975 for GJA25-375 endoder dc motor.
 
 <table>
