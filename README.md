@@ -149,14 +149,13 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 <td align="center">
 <b>Motor Wiring </b><br>
 <img width="400" height="400" alt="Wiring_diagram" src="./src/diff_drive_robot/Files/images/simulation_images/Wiring_diagram.png" />
-<b></b><br>
-<img src="./src/diff_drive_robot/Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="300">
+<img src="./src/diff_drive_robot/Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="400">
 </td>
 
 <td align="center">
-<b>Motor Testing Demo</b><br>
-<video src="https://github.com/user-attachments/assets/19398011-af18-4047-8f3f-b6f6d7177571" width="400" height="300" controls></video>
-<b>ROS2 to motor communication layer </b><br>
+<b>Motor Experiment Demo</b><br>
+<video src="https://github.com/user-attachments/assets/19398011-af18-4047-8f3f-b6f6d7177571" width="400" height="400" controls></video>
+<b>ROS to Motor Communication Layer </b><br>
 <img width="400" height="400" alt="Screenshot from 2026-10-30 09-43-01" src="https://github.com/user-attachments/assets/1cbe862e-98ff-44a5-9b81-eb6514ea69f5" />
 
 </td>
