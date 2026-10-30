@@ -156,6 +156,9 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 <td align="center">
 <b>Motor Testing Demo</b><br>
 <video src="https://github.com/user-attachments/assets/19398011-af18-4047-8f3f-b6f6d7177571" width="400" height="300" controls></video>
+<b>ROS2 to motor communication layer </b><br>
+<img width="400" height="400" alt="Screenshot from 2026-10-30 09-43-01" src="https://github.com/user-attachments/assets/1cbe862e-98ff-44a5-9b81-eb6514ea69f5" />
+
 </td>
 </tr>
 </table>
