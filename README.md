@@ -2,8 +2,7 @@
 
 ## 📌 Overview
 
-This repository implements autonomous navigation of a differential drive mobile robot using **ROS 2 Humble**. The project leverages a **2D LiDAR (Slamtec RPLIDAR A1)** for simultaneous localization and mapping (SLAM) and **Navigation2 (Nav2)** for path planning, obstacle avoidance, and autonomous navigation. Additionally, it integrates a standard camera and depth camera for visual SLAM and object tracking.
-The project is fully validated in both **Gazebo simulation** and on a **real-world hardware platform**. 
+This repository implements autonomous navigation of a differential drive mobile robot using **ROS 2 Humble**. The project leverages a **2D LiDAR (Slamtec RPLIDAR A1)** for simultaneous localization and mapping (SLAM) and **Navigation2 (Nav2)** for path planning, obstacle avoidance, and autonomous navigation. Additionally, it integrates a standard camera and depth camera for visual SLAM, computer vision and object tracking, and IMU and wheel encoder for sensor fusion. The project is fully validated in both **Gazebo simulation** and on a **real-world hardware platform**. 
 
 ---
 
