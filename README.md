@@ -56,13 +56,11 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 </table>
 
 ---
-## Motor
-The `ROSArduinoBridge` is written for Arduino Uno board and the following modification are made to adopt it for Arduino Mega2560.
--Download  motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
-- Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno:
-
-
-  1. Interrupt routine for LEFT and RIGHT encoder, taking care of actual counting
+## Encoder Driver and Motor Driver Modification
+This section describes the modification made to `encoder_driver` and `ROSArduinoBridge` sections of the [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository to ensure compatibility  with Arduino Mega 2560. The original repository used Arduino Uno board, so modifications were made to adapt the motor and encoder driver to the Mega 2560.
+- Download motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
+- Modify the Interrupt routine encoder reading (`encoder_driver`) of `ROSArduinoBridge`:
+  I. Interrupt routine for LEFT and RIGHT encoder, taking care of actual counting:
   ```bash
   ISR (PCINT2_vect){
    static uint8_t left_enc_last=0;
@@ -81,10 +79,10 @@ The `ROSArduinoBridge` is written for Arduino Uno board and the following modifi
   }
   
   ```
-  2. Modify the `ROSArduinoBridge` serial communication:
+  II. Also, Modify the `ROSArduinoBridge` serial communication:
   
   ```bash
-  // Initialize the motor controller if used */
+  // Initialize the motor controller if 
   #ifdef USE_BASE
   #ifdef ARDUINO_ENC_COUNTER
     //set as inputs
@@ -101,10 +99,8 @@ The `ROSArduinoBridge` is written for Arduino Uno board and the following modifi
     
     // pin change mask to listen to left encoder pins
     PCMSK2 |= (1 << LEFT_ENC_PIN_A)|(1 << LEFT_ENC_PIN_B);
-    
     // pin change mask to listen to right encoder pins
     PCMSK2 |= (1 << RIGHT_ENC_PIN_A)|(1 << RIGHT_ENC_PIN_B);
-    
     // enable PCINT1 and PCINT2 interrupt in the general interrupt mask
     PCICR |= (1 << PCIE2);
   #endif
@@ -114,7 +110,7 @@ The `ROSArduinoBridge` is written for Arduino Uno board and the following modifi
   ```
 - The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
-- The wiring diagram is done as follows: 
+- Modify `encoder_driver.h` and `motor_driver.h` sections according to the following wiring diagram: 
   
 |           From                                               | To                    |
 | ------------------------------------------------------------  | -----------------------|
