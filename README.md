@@ -4,9 +4,7 @@
 
 This repository implements autonomous navigation of a differential drive mobile robot using **ROS 2 Humble**. The project leverages a **2D LiDAR (Slamtec RPLIDAR A1)** for simultaneous localization and mapping (SLAM) and **Navigation2 (Nav2)** for path planning, obstacle avoidance, and autonomous navigation. Additionally, it integrates a standard camera and depth camera for visual SLAM, computer vision and object tracking, and IMU and wheel encoder for sensor fusion. The project is fully validated in both **Gazebo simulation** and on a **real-world hardware platform**. 
 
----
-
-## Project Features:
+### Project Features:
 - ROS2 Humble-based differential drive robot simulation.
 - URDF/Xacro robot description.
 - 2D LiDAR integration, IMU, Camera and Depth Camera integration.
@@ -18,9 +16,9 @@ This repository implements autonomous navigation of a differential drive mobile 
   
 ---
 
-# Hardware Implementation
+## Hardware Implementation
 
-## 🛠 Hardware Components
+### 🛠 Hardware Components
 
 |Roll No.|           Component                |                 Image                                                                   |      Description   |
 |--------|------------------------------------|-----------------------------------------------------------------------------------------|--------------------|
@@ -37,7 +35,7 @@ This repository implements autonomous navigation of a differential drive mobile 
 
 ---
 
-## Differential Drive Robot Hardware Platform
+### Differential Drive Robot Hardware Platform
 
 <table>
 <tr>
@@ -55,7 +53,7 @@ This repository implements autonomous navigation of a differential drive mobile 
 </table>
 
 ---
-## Encoder Driver and Motor Driver Modification
+### Encoder Driver and Motor Driver Modification
 This section describes the modification made to `encoder_driver` and `ROSArduinoBridge` sections of the [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository to ensure compatibility  with Arduino Mega 2560. The original repository used Arduino Uno board, so modifications were made to adapt the motor and encoder driver to the Mega 2560.
 - Download motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
 - Modify the Interrupt routine encoder reading (`encoder_driver`) of `ROSArduinoBridge`:
@@ -135,7 +133,7 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
 - The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 
 ---
-## Motor Experiment
+### Motor Experiment
 This is to determined the encoder counts per revolution (CPR) of the dc motor and ensure that the encoder reading are persistent with their corresponding motors.  
 - Upload [`ROSArduinoBridge`]( https://github.com/eyasuder/ros_arduino_bridge) to Arduino mega2560.
 - Clone `serial motor demo` from https://github.com/joshnewans/serial_motor_demo.
@@ -162,9 +160,9 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 </table>
 ---
 
-# 🧠 Software Stack
+## 🧠 Software Stack
 
-## Software Requirements
+### Software Requirements
 
 - Ubuntu 22.04
 - ROS 2 Humble
@@ -176,7 +174,7 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 
 ---
 
-## ⚙️ Installation
+### ⚙️ Installation
 1. Open terminal and Install the required tools:
 ```bash
 sudo apt update
@@ -212,7 +210,7 @@ source ~/diff_ws/install/setup.bash
 
 ---
 
-## 🚀 Running the Project
+### 🚀 Running the Project
 1. Launch the project:
 ```bash
 ros2 launch diff_drive_robot sim.launch.py
@@ -240,9 +238,9 @@ ros2 launch diff_drive_robot localization_launch.py map:=./path/to/saved/map use
 ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscribe_transient_local:=true
 ```
 ---
-# Simulation Results
+## Simulation Results
 
-## 🗺️ Mapping
+### 🗺️ Mapping
 
 <table>
 <tr>
@@ -263,7 +261,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 ---
 
-## 🧭 Navigation
+### 🧭 Navigation
 
 <table>
 <tr>
@@ -282,8 +280,8 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 ---
 
-# Real Robot Experiment 
-## Mapping using SLAM toolbox
+## Real Robot Experiment 
+### Mapping using SLAM toolbox
 <table>
 <tr>
 <td align="center">
@@ -299,7 +297,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 
 ---
-## Autonomous navigation on real robot using Nav2
+### Autonomous navigation on real robot using Nav2
 
 <table>
 <tr>
@@ -313,14 +311,9 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 </tr>
 </table>
 
-
-
-
-
-
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 src
@@ -383,7 +376,7 @@ src
 
 ```
 
-# Feature works
+## Feature works
 
 - Sensor fusion ( Wheel encoder and IMU for odometry correction).
 - Custom Motion planning and controller implementation. 
@@ -392,5 +385,5 @@ src
 - Scale it for mobile manipulations.
 
 ---
-## Author
+### Author
 Eyasu Derbew
