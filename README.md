@@ -10,7 +10,7 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 ## Project Features:
 - ROS2 Humble-based differential drive robot simulation.
 - URDF/Xacro robot description.
-- 2D LiDAR integration, Camera and Depth Camera integration.
+- 2D LiDAR integration, IMU, Camera and Depth Camera integration.
 - SLAM using SLAM Toolbox.
 - Autonomous navigation using Navigation2.
 - Obstacle avoidance, and object detection.
@@ -60,6 +60,7 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 This section describes the modification made to `encoder_driver` and `ROSArduinoBridge` sections of the [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository to ensure compatibility  with Arduino Mega 2560. The original repository used Arduino Uno board, so modifications were made to adapt the motor and encoder driver to the Mega 2560.
 - Download motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
 - Modify the Interrupt routine encoder reading (`encoder_driver`) of `ROSArduinoBridge`:
+  
   I. Interrupt routine for LEFT and RIGHT encoder, taking care of actual counting:
   ```bash
   ISR (PCINT2_vect){
@@ -108,7 +109,6 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
   resetPID();
   #endif
   ```
-- The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
 - Modify `encoder_driver.h` and `motor_driver.h` sections according to the following wiring diagram: 
   
@@ -132,6 +132,8 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
 | Right Motor direction  (IN3, L298N motor driver)              |Pin D10 Arduino mega2560 |
 | Right Motor direction  (IN4, L298N motor driver)              |Pin D6 Arduino mega2560 |
 | Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
+
+- The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 
 ---
 ## Motor Experiment
