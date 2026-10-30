@@ -56,32 +56,32 @@ The project is fully validated in both **Gazebo simulation** and on a **real-wor
 </table>
 
 ---
-## Arduino mega2560 Pin Configuration
-
-- Clone motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
+## Motor
+The `ROSArduinoBridge` is written for Arduino Uno board and the following modification are made to adopt it for Arduino Mega2560.
+-Download  motor control code from [`ROSArduinoBridge`]( https://github.com/joshnewans/ros_arduino_bridge.git) repository.
 - Modify the Interrupt routine encoder reading code (`encoder_drive`) of `ROSArduinoBridge` for Arduino mega2560 since it was written for Arduino Uno:
-  
+
+
+  1. Interrupt routine for LEFT and RIGHT encoder, taking care of actual counting
   ```bash
-  /* Interrupt routine for LEFT and RIGHT encoder, taking care of actual counting */
   ISR (PCINT2_vect){
-  	static uint8_t left_enc_last=0;
-    static uint8_t right_enc_last=0;
-    uint8_t port_pink = PINK;
-    
-    // this is for right encoder
-	  left_enc_last <<=2; //shift previous state two places
-	  left_enc_last |= (port_pink & 0x03); //read the current state
+   static uint8_t left_enc_last=0;
+   static uint8_t right_enc_last=0;
+   uint8_t port_pink = PINK;
   
-    left_enc_pos += ENC_STATES[(left_enc_last & 0x0f)];
-  
-    // this is for right encoder
-    right_enc_last <<=2; //shift previous state two places
-    right_enc_last |= (port_pink & 0x0C) >> 2; //read the current state into lowest 2 bits
-  
-    right_enc_pos += ENC_STATES[(right_enc_last & 0x0f)];
+   // Left motor encoder reading
+   left_enc_last <<=2; //shift previous state two places
+   left_enc_last |= (port_pink & 0x03); //read the current state
+   left_enc_pos += ENC_STATES[(left_enc_last & 0x0f)];
+
+   // Right motor encoder reading
+   right_enc_last <<=2; //shift previous state two places
+   right_enc_last |= (port_pink & 0x0C) >> 2; //read the current state into lowest 2 bits
+   right_enc_pos += ENC_STATES[(right_enc_last & 0x0f)];
   }
+  
   ```
-   and also, modify the `ROSArduinoBridge`:
+  2. Modify the `ROSArduinoBridge` serial communication:
   
   ```bash
   // Initialize the motor controller if used */
