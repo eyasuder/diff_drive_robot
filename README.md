@@ -164,13 +164,14 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 
 ### Software Requirements
 
-- Ubuntu 22.04
-- ROS 2 Humble
-- Gazebo Fortress
-- RViz2
-- Navigation2
-- SLAM Toolbox
-- Arduino IDE
+- <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
+- <img src="https://img.shields.io/badge/ROS2-Humble-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+- <img src="https://img.shields.io/badge/Gazebo-Fortress-FF6C00?style=for-the-badge&logo=gazebo&logoColor=white" />
+- <img src="https://img.shields.io/badge/RViz2-Visualization-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+- <img src="https://img.shields.io/badge/Nav2-Navigation-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+- <img src="https://img.shields.io/badge/SLAM_Toolbox-Mapping-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+- <img src="https://img.shields.io/badge/Arduino-IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white" />
+
 
 ---
 
