@@ -313,6 +313,8 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 </table>
 
 ---
+## To Do
+- EKF-based Sensor Fusion (Wheel encoder and IMU for Odometry correction).
 
 ## Repository Structure
 
@@ -379,7 +381,6 @@ src
 
 ## Future works
 
-- Sensor fusion ( Wheel encoder and IMU for odometry correction).
 - Custom Motion planning and controller implementation. 
 - Computer vision.
 - Design using CAD softwares.
