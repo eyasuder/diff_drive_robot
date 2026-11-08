@@ -259,7 +259,6 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 </tr>
 </table>
 
-
 ---
 
 ### 🧭 Navigation
