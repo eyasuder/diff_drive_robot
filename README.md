@@ -382,9 +382,16 @@ src
 
 - Custom Motion planning and controller implementation. 
 - Computer vision.
-- Design using CAD softwares.
-- Scale it for mobile manipulations.
+- Design using CAD software and scale it for mobile manipulations.
 
 ---
+## Acknowledgement
+- This project uses and modifies code from [Articulated Robotics](https://articulatedrobotics.xyz/) by Josh Newans.
+- [ROS2](https://www.ros.org/) - Robot Operating System 2.
+- [ros2_control](https://control.ros.org/rolling/index.html) - Robot hardware and controller framework.
+- [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox) - 2D SLAM Implementation.
+- [Nav2](https://docs.nav2.org/rolling/)- Autonomous navigation framework
+
+
 ### Author
 Eyasu Derbew
