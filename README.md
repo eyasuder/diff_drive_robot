@@ -247,7 +247,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <tr>
 <td align="center">
 <b>Gazebo and Rviz simulations</b><br>
-<img src="./src/diff_drive_robot/Files/images/simulation_images/Gazebo_simulation.png"" width="500" height="400">
+<video src="https://github.com/user-attachments/assets/65a6b1de-f617-4eb3-858c-8ef67cffd616" width="200" height="300" controls></video>
 <img src="./src/diff_drive_robot/Files/images/simulation_images/Rviz_simultation.png"" width="500" height="400">
 </td>
   
@@ -260,6 +260,8 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 </table>
 
 ---
+<!-- <img src="./src/diff_drive_robot/Files/images/simulation_images/Gazebo_simulation.png"" width="500" height="400">-->
+
 
 ### 🧭 Navigation
 
