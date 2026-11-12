@@ -248,9 +248,9 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <td align="center">
 <b>Gazebo and Rviz simulations</b><br>
 <video src="https://github.com/user-attachments/assets/65a6b1de-f617-4eb3-858c-8ef67cffd616" width="200" height="300" controls></video>
-<img src="./src/diff_drive_robot/Files/images/simulation_images/Rviz_simultation.png"" width="500" height="400">
+<video src="https://github.com/user-attachments/assets/580e0ca2-678e-4353-bd84-cc9e1e6baa6f" width="200" height="300" controls></video>
 </td>
-  
+
 <td align="center">
 <b>Mapping</b><br>
 <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
