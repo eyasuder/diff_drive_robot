@@ -151,8 +151,8 @@
 
 <gazebo reference="castor_wheel">
     <material>Gazebo/Black</material>
-    <mu1 value="0.001"/>
-    <mu2 value="0.001"/>
+    <mu1 value="0.0000001"/>
+    <mu2 value="0.0000001"/>
 </gazebo>
 
 <joint name="castor_wheel_joint" type="fixed">
