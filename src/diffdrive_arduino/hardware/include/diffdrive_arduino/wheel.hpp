@@ -1,3 +1,4 @@
+// Copyright Josh Newans, Articulated Robotics (https://articulatedrobotics.xyz/)
 #ifndef DIFFDRIVE_ARDUINO_WHEEL_HPP
 #define DIFFDRIVE_ARDUINO_WHEEL_HPP
 
