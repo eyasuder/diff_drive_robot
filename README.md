@@ -109,26 +109,47 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
 - Modify `encoder_driver.h` and `motor_driver.h` sections according to the following wiring diagram: 
   
-|           From                                               | To                    |
-| ------------------------------------------------------------  | -----------------------|
-| Left Motor Positive terminal                                  | OUT2 L298N motor driver|
-| Left Motor Encoder negative terminal                          | GND pin Arduino2560    |
-| Left Motor Encoder A phase signal feedback                    | pin A8 Arduino mega2560|
-| Left Motor Encoder B phase signal feedback                    | Pin A9 Arduino mega2560|
-| Left Motor Encoder positive terminal                          | Arduino mega2560 3V     |
-| Left Motor negative terminal                                  | OUT1 L298N motor driver|
-| Right Motor positive terminal                                 | OUT3 L298N motor driver |
-| Right Motor Encoder negative terminal                         |GND pin Arduino2560|
-| Right Motor Encoder A phase signal feedback                   | Pin A11 Arduino mega2560|
-| Right Motor Encoder B phase signal feedback                   | Pin A10 Arduino mega2560 |
-| Right Motor Encoder positive terminal                         | Arduino mega2560 3V|
-| Right Motor negative terminal                                 |OUT4 L298N motor driver |
-| Left Motor direction (IN1, L298N motor driver)                | Pin D9 Arduino mega2560|
-| Left Motor direction (IN2, L298N motor driver)                | Pin D5 Arduino mega2560|
-| Left Motor enable   (ENA, L298N motor driver)                 | Pin D12 Arduino mega2560|
-| Right Motor direction  (IN3, L298N motor driver)              |Pin D10 Arduino mega2560 |
-| Right Motor direction  (IN4, L298N motor driver)              |Pin D6 Arduino mega2560 |
-| Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
+|Description |                         L298N Motor Driver                 |   Arduino Mega2560        |
+|-----------| ------------------------------------------------------------  | -----------------------|
+|           | Left Motor Positive terminal                                  | OUT2 L298N motor driver|
+|           | Left Motor Encoder negative terminal                          | GND pin Arduino2560    |
+|           | Left Motor Encoder A phase signal feedback                    | pin A8 Arduino mega2560|
+|           | Left Motor Encoder B phase signal feedback                    | Pin A9 Arduino mega2560|
+|           | Left Motor Encoder positive terminal                          | Arduino mega2560 3V     |
+|           | Left Motor negative terminal                                  | OUT1 L298N motor driver|
+|           | Right Motor positive terminal                                 | OUT3 L298N motor driver |
+|            | Right Motor Encoder negative terminal                         |GND pin Arduino2560|
+|           | Right Motor Encoder A phase signal feedback                   | Pin A11 Arduino mega2560|
+|            | Right Motor Encoder B phase signal feedback                   | Pin A10 Arduino mega2560 |
+|           | Right Motor Encoder positive terminal                         | Arduino mega2560 3V|
+|          | Right Motor negative terminal                                 |OUT4 L298N motor driver |
+|          | Left Motor direction (IN1, L298N motor driver)                | Pin D9 Arduino mega2560|
+|           | Left Motor direction (IN2, L298N motor driver)                | Pin D5 Arduino mega2560|
+|          | Left Motor enable   (ENA, L298N motor driver)                 | Pin D12 Arduino mega2560|
+|           | Right Motor direction  (IN3, L298N motor driver)              |Pin D10 Arduino mega2560 |
+|            | Right Motor direction  (IN4, L298N motor driver)              |Pin D6 Arduino mega2560 |
+|          | Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
+
+Description |           Arduino Mega2560                                      |       DC Motor         |
+|-----------| ------------------------------------------------------------  | -----------------------|
+|           | Left Motor Positive terminal                                  | OUT2 L298N motor driver|
+|           | Left Motor Encoder negative terminal                          | GND pin Arduino2560    |
+|           | Left Motor Encoder A phase signal feedback                    | pin A8 Arduino mega2560|
+|           | Left Motor Encoder B phase signal feedback                    | Pin A9 Arduino mega2560|
+|           | Left Motor Encoder positive terminal                          | Arduino mega2560 3V     |
+|           | Left Motor negative terminal                                  | OUT1 L298N motor driver|
+|           | Right Motor positive terminal                                 | OUT3 L298N motor driver |
+|            | Right Motor Encoder negative terminal                         |GND pin Arduino2560|
+|           | Right Motor Encoder A phase signal feedback                   | Pin A11 Arduino mega2560|
+|            | Right Motor Encoder B phase signal feedback                   | Pin A10 Arduino mega2560 |
+|           | Right Motor Encoder positive terminal                         | Arduino mega2560 3V|
+|          | Right Motor negative terminal                                 |OUT4 L298N motor driver |
+|          | Left Motor direction (IN1, L298N motor driver)                | Pin D9 Arduino mega2560|
+|           | Left Motor direction (IN2, L298N motor driver)                | Pin D5 Arduino mega2560|
+|          | Left Motor enable   (ENA, L298N motor driver)                 | Pin D12 Arduino mega2560|
+|           | Right Motor direction  (IN3, L298N motor driver)              |Pin D10 Arduino mega2560 |
+|            | Right Motor direction  (IN4, L298N motor driver)              |Pin D6 Arduino mega2560 |
+|          | Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
 
 - The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 
@@ -263,26 +284,27 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <table>
 <tr>
   <td align="center">
-    <video src="https://github.com/user-attachments/assets/65a6b1de-f617-4eb3-858c-8ef67cffd616" width="100%" ></video><br/>
-    <b>Gazebo </b><br/>
+    <video src="https://github.com/user-attachments/assets/65a6b1de-f617-4eb3-858c-8ef67cffd616" width="100%" ></video>
+    <b>Robot spawning on Gazebo using remote control </b>
   </td>
  <td align= "center">
-     <video src="https://github.com/user-attachments/assets/580e0ca2-678e-4353-bd84-cc9e1e6baa6f" width="100%" ></video><br/>
-     <b> Rviz simulation</b><br/>
+     <video src="https://github.com/user-attachments/assets/580e0ca2-678e-4353-bd84-cc9e1e6baa6f" width="100%" ></video>
+     <b> Robot spawning on Rviz using remote control</b>
   </td>
 </tr>
 	
 <tr>
    <td align="center">
-     <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="100%" ></video><br/>
-     <b>Warehouse Mapping</b><br/>
+     <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="100%" ></video>
+     <b>Warehouse Mapping</b>
    </td>
    <td align="center">
-     <img src="./src/diff_drive_robot/Files/images/simulation_images/Map.png"" width="100%" ><br/>
-     <b>Occupancy grid map</b><br/>
+     <img src="./src/diff_drive_robot/Files/images/simulation_images/Map.png"" width="500" height="500">
+     <b>Occupancy grid map</b>
    </td>
 </tr>
 </table>
+
 
 ---
 
@@ -292,7 +314,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <tr>
 <td align="center">
 <b>Global cost map</b><br>
-<img src="./src/diff_drive_robot/Files/images/simulation_images/robot_navigation_globalcostmap.png"" width="600" height="600">
+<img src="https://github.com/user-attachments/assets/dbc460bd-654b-44d0-85ac-031345445a2b" " width="600" height="600">
 <video src="https://github.com/user-attachments/assets/5ba1655c-bca6-42cb-9042-bd11ef00e408" width="200" height="200" controls></video>
 </td>
 
