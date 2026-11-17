@@ -241,7 +241,20 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 ---
 ## Simulation Results
 
-### 🗺️ Mapping
+### 🗺️ Simulation Environment and Mapping
+#### Warehouse simulation Environmment
+- An industrial warehouse style simulation environment developed using `Gazebo Fortress (Gazebo Sim 6.18.0)` is used and the environment is described using `SDF 1.9` with `ode` physics engine.
+- The warehouse has `20 x 18 x 2 m` dimension, maximum physics step size `0.001 s`, real-time update rate of `1000`, and configured real-time factor of `1.0`.
+<div align="center">
+  <img width="800" height="700" alt="warehouse_layout" src="https://github.com/user-attachments/assets/cdd36b04-3b31-405e-9430-fc147dd1dfc1" alt="Warehouse Layout">
+  <br>
+  <b>Warehouse Layout</b><br>
+  <sub>20 x 18 m, top view</sub>
+</div>
+
+---
+
+#### Mapping 
 
 <table>
 <tr>
@@ -255,6 +268,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 <b>Mapping</b><br>
 <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
 <img src="./src/diff_drive_robot/Files/images/simulation_images/Map.png"" width="500" height="300">
+ <b>Nav2</b><br/><sub>Goal from the terminal, then from RViz: global plan, MPPI local plan, costmaps</sub>
 </td>
 </tr>
 </table>
