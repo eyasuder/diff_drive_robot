@@ -241,7 +241,7 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 ---
 ## Simulation Results
 
-### 🗺️ Simulation Environment and Mapping
+### Simulation Environment and Mapping
 #### Warehouse simulation Environmment
 - An industrial warehouse style simulation environment developed using `Gazebo Fortress (Gazebo Sim 6.18.0)` is used and the environment is described using `SDF 1.9` with `ode` physics engine.
 - The warehouse has `20 x 18 x 2 m` dimension, maximum physics step size `0.001 s`, real-time update rate of `1000`, and configured real-time factor of `1.0`.
@@ -254,28 +254,37 @@ ros2 launch diff_drive_robot navigation_launch.py use_sim_time:=true map_subscri
 
 ---
 
-#### Mapping 
+#### 🗺️ Mapping 
+- The warehouse environment is mapped using **SLAM Toolbox** with a **2D LiDAR** sensor.
+- A **2D LiDAR** scans publishes a laser scan on `/scan` topic, wheel odometry estimates robot motion, andd **TF** transformation relates the LiDAR, robot, and odometry frames.
+- The SLAM Toolbox mode is set in **asynchronous mapping mode**.
+- The resulting occupancy-grid map is used for autonomous navigation using **Nav2**.
 
 <table>
 <tr>
-<td align="center">
-<b>Gazebo and Rviz simulations</b><br>
-<video src="https://github.com/user-attachments/assets/65a6b1de-f617-4eb3-858c-8ef67cffd616" width="200" height="300" controls></video>
-<video src="https://github.com/user-attachments/assets/580e0ca2-678e-4353-bd84-cc9e1e6baa6f" width="200" height="300" controls></video>
-</td>
-
-<td align="center">
-<b>Mapping</b><br>
-<video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="200" height="300" controls></video>
-<img src="./src/diff_drive_robot/Files/images/simulation_images/Map.png"" width="500" height="300">
- <b>Nav2</b><br/><sub>Goal from the terminal, then from RViz: global plan, MPPI local plan, costmaps</sub>
-</td>
+  <td align="center">
+    <video src="https://github.com/user-attachments/assets/65a6b1de-f617-4eb3-858c-8ef67cffd616" width="100%" ></video><br/>
+    <b>Gazebo </b><br/>
+  </td>
+ <td align= "center">
+     <video src="https://github.com/user-attachments/assets/580e0ca2-678e-4353-bd84-cc9e1e6baa6f" width="100%" ></video><br/>
+     <b> Rviz simulation</b><br/>
+  </td>
+</tr>
+	
+<tr>
+   <td align="center">
+     <video src="https://github.com/user-attachments/assets/280327ed-5290-4da8-bb4b-ab88d4bcd8b2" width="100%" ></video><br/>
+     <b>Warehouse Mapping</b><br/>
+   </td>
+   <td align="center">
+     <img src="./src/diff_drive_robot/Files/images/simulation_images/Map.png"" width="100%" ><br/>
+     <b>Occupancy grid map</b><br/>
+   </td>
 </tr>
 </table>
 
 ---
-<!-- <img src="./src/diff_drive_robot/Files/images/simulation_images/Gazebo_simulation.png"" width="500" height="400">-->
-
 
 ### 🧭 Navigation
 
