@@ -77,7 +77,7 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
   }
   
   ```
-  II. Also, modify the `ROSArduinoBridge` serial communication:
+  II. Also, modify the following in the `ROSArduinoBridge` serial communication section:
   
   ```bash
   // Initialize the motor controller if 
