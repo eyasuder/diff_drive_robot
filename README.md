@@ -77,7 +77,7 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
   }
   
   ```
-  II. Also, Modify the `ROSArduinoBridge` serial communication:
+  II. Also, modify the `ROSArduinoBridge` serial communication:
   
   ```bash
   // Initialize the motor controller if 
@@ -108,48 +108,37 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
   ```
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
 - Modify `encoder_driver.h` and `motor_driver.h` sections according to the following wiring diagram: 
-  
-|Description |                         L298N Motor Driver                 |   Arduino Mega2560        |
-|-----------| ------------------------------------------------------------  | -----------------------|
-|           | Left Motor Positive terminal                                  | OUT2 L298N motor driver|
-|           | Left Motor Encoder negative terminal                          | GND pin Arduino2560    |
-|           | Left Motor Encoder A phase signal feedback                    | pin A8 Arduino mega2560|
-|           | Left Motor Encoder B phase signal feedback                    | Pin A9 Arduino mega2560|
-|           | Left Motor Encoder positive terminal                          | Arduino mega2560 3V     |
-|           | Left Motor negative terminal                                  | OUT1 L298N motor driver|
-|           | Right Motor positive terminal                                 | OUT3 L298N motor driver |
-|            | Right Motor Encoder negative terminal                         |GND pin Arduino2560|
-|           | Right Motor Encoder A phase signal feedback                   | Pin A11 Arduino mega2560|
-|            | Right Motor Encoder B phase signal feedback                   | Pin A10 Arduino mega2560 |
-|           | Right Motor Encoder positive terminal                         | Arduino mega2560 3V|
-|          | Right Motor negative terminal                                 |OUT4 L298N motor driver |
-|          | Left Motor direction (IN1, L298N motor driver)                | Pin D9 Arduino mega2560|
-|           | Left Motor direction (IN2, L298N motor driver)                | Pin D5 Arduino mega2560|
-|          | Left Motor enable   (ENA, L298N motor driver)                 | Pin D12 Arduino mega2560|
-|           | Right Motor direction  (IN3, L298N motor driver)              |Pin D10 Arduino mega2560 |
-|            | Right Motor direction  (IN4, L298N motor driver)              |Pin D6 Arduino mega2560 |
-|          | Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
 
-Description |           Arduino Mega2560                                      |       DC Motor         |
-|-----------| ------------------------------------------------------------  | -----------------------|
-|           | Left Motor Positive terminal                                  | OUT2 L298N motor driver|
-|           | Left Motor Encoder negative terminal                          | GND pin Arduino2560    |
-|           | Left Motor Encoder A phase signal feedback                    | pin A8 Arduino mega2560|
-|           | Left Motor Encoder B phase signal feedback                    | Pin A9 Arduino mega2560|
-|           | Left Motor Encoder positive terminal                          | Arduino mega2560 3V     |
-|           | Left Motor negative terminal                                  | OUT1 L298N motor driver|
-|           | Right Motor positive terminal                                 | OUT3 L298N motor driver |
-|            | Right Motor Encoder negative terminal                         |GND pin Arduino2560|
-|           | Right Motor Encoder A phase signal feedback                   | Pin A11 Arduino mega2560|
-|            | Right Motor Encoder B phase signal feedback                   | Pin A10 Arduino mega2560 |
-|           | Right Motor Encoder positive terminal                         | Arduino mega2560 3V|
-|          | Right Motor negative terminal                                 |OUT4 L298N motor driver |
-|          | Left Motor direction (IN1, L298N motor driver)                | Pin D9 Arduino mega2560|
-|           | Left Motor direction (IN2, L298N motor driver)                | Pin D5 Arduino mega2560|
-|          | Left Motor enable   (ENA, L298N motor driver)                 | Pin D12 Arduino mega2560|
-|           | Right Motor direction  (IN3, L298N motor driver)              |Pin D10 Arduino mega2560 |
-|            | Right Motor direction  (IN4, L298N motor driver)              |Pin D6 Arduino mega2560 |
-|          | Right Motor Enable     (ENB, L298N motor driver)              | Pin A13 Arduino mega2560|
+| Description | L298N Encoder Motor Driver | Arduino Mega2560 |
+|---|---|---|
+| Left motor encoder signal | A phase signal feedback | Pin A8 Arduino Mega2560 |
+| Left motor encoder signal | B phase signal feedback | Pin A9 Arduino Mega2560 |
+| Right motor encoder signal | A phase signal feedback | Pin A11 Arduino Mega2560 |
+| Right motor encoder signal | B phase signal feedback | Pin A10 Arduino Mega2560 |
+| Left motor encoder signal | Positive terminal | Arduino Mega2560 3V |
+| Left Motor Encoder | Negative terminal | GND pin Arduino Mega2560 |
+| Right Motor Encoder | Positive terminal | Arduino Mega2560 3V |
+| Right Motor Encoder | Negative terminal | GND pin Arduino Mega2560 |
+
+<br>
+
+| Description | Arduino Mega2560 | DC Motor |
+|---|---|---|
+| | Left Motor Positive terminal | OUT2 L298N motor driver |
+| | Left Motor negative terminal | OUT1 L298N motor driver |
+| | Right Motor positive terminal | OUT3 L298N motor driver |
+| | Right Motor negative terminal | OUT4 L298N motor driver |
+
+<br>
+
+| Description | Arduino Mega2560 | DC Motor |
+|---|---|---|
+| | Left Motor direction (IN1, L298N motor driver) | Pin D9 Arduino Mega2560 |
+| | Left Motor direction (IN2, L298N motor driver) | Pin D5 Arduino Mega2560 |
+| | Left Motor enable (ENA, L298N motor driver) | Pin D12 Arduino Mega2560 |
+| | Right Motor direction (IN3, L298N motor driver) | Pin D10 Arduino Mega2560 |
+| | Right Motor direction (IN4, L298N motor driver) | Pin D6 Arduino Mega2560 |
+| | Right Motor Enable (ENB, L298N motor driver) | Pin A13 Arduino Mega2560 |
 
 - The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 
@@ -164,21 +153,28 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 
 <table>
 <tr>
-<td align="center">
-<b>Motor Wiring </b><br>
-<img width="400" height="400" alt="Wiring_diagram" src="./src/diff_drive_robot/Files/images/simulation_images/Wiring_diagram.png" />
-<img src="./src/diff_drive_robot/Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="400">
-</td>
-
-<td align="center">
-<b>Motor Experiment Demo</b><br>
-<video src="https://github.com/user-attachments/assets/19398011-af18-4047-8f3f-b6f6d7177571" width="400" height="400" controls></video>
-<b>ROS to Motor Communication Layer </b><br>
-<img width="400" height="400" alt="Screenshot from 2026-10-30 09-43-01" src="https://github.com/user-attachments/assets/1cbe862e-98ff-44a5-9b81-eb6514ea69f5" />
-
-</td>
+  <td align="center">
+     <img width="400" height="400" src="./src/diff_drive_robot/Files/images/simulation_images/Wiring_diagram.png"/><br>
+     <b>Wiring</b><br>
+  </td>
+  <td align= "center">
+     <img src="./src/diff_drive_robot/Files/images/simulation_images/motor_wiring_demo.jpeg" width="500" height="400">
+	 <b>Wiring demo</b>
+  </td>
+</tr>
+	
+<tr>
+   <td align="center">
+     <video src="https://github.com/user-attachments/assets/19398011-af18-4047-8f3f-b6f6d7177571" width="30%" controls></video>
+     <b>Motor Experiment Demo</b>
+   </td>
+   <td align="center">
+     <img width="500" height="500" src="https://github.com/user-attachments/assets/1cbe862e-98ff-44a5-9b81-eb6514ea69f5" />
+     <b>ROS to Motor Communication Layer</b>
+   </td>
 </tr>
 </table>
+
 ---
 
 ## 🧠 Software Stack
