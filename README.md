@@ -83,62 +83,67 @@ This section describes the modification made to `encoder_driver` and `ROSArduino
   // Initialize the motor controller if 
   #ifdef USE_BASE
   #ifdef ARDUINO_ENC_COUNTER
-    //set as inputs
-    DDRK &= ~(1<<LEFT_ENC_PIN_A);
-    DDRK &= ~(1<<LEFT_ENC_PIN_B);
-    DDRK &= ~(1<<RIGHT_ENC_PIN_A);
-    DDRK &= ~(1<<RIGHT_ENC_PIN_B);
-    
-    //enable pull up resistors
-    PORTK |= (1<<LEFT_ENC_PIN_A);
-    PORTK |= (1<<LEFT_ENC_PIN_B);
-    PORTK |= (1<<RIGHT_ENC_PIN_A);
-    PORTK |= (1<<RIGHT_ENC_PIN_B);
-    
-    // pin change mask to listen to left encoder pins
-    PCMSK2 |= (1 << LEFT_ENC_PIN_A)|(1 << LEFT_ENC_PIN_B);
-    // pin change mask to listen to right encoder pins
-    PCMSK2 |= (1 << RIGHT_ENC_PIN_A)|(1 << RIGHT_ENC_PIN_B);
-    // enable PCINT1 and PCINT2 interrupt in the general interrupt mask
-    PCICR |= (1 << PCIE2);
+    //Configure the encoder channel pins as inputs
+	DDRK &= ~(1<<LEFT_ENC_PIN_A);
+	DDRK &= ~(1<<LEFT_ENC_PIN_B);
+	DDRK &= ~(1<<RIGHT_ENC_PIN_A);
+	DDRK &= ~(1<<RIGHT_ENC_PIN_B);
+		
+	//enable internal pull up resistors
+	PORTK |= (1<<LEFT_ENC_PIN_A);
+	PORTK |= (1<<LEFT_ENC_PIN_B);
+	PORTK |= (1<<RIGHT_ENC_PIN_A);
+	PORTK |= (1<<RIGHT_ENC_PIN_B);
+	
+	//  Unmask the pin-change interrupt for each encoder channel, so that any
+	//  edge (rising or falling) on A or B triggers the PCINT2 ISR.
+	PCMSK2 |= (1 << LEFT_ENC_PIN_A)  | (1 << LEFT_ENC_PIN_B);   // left encoder
+	PCMSK2 |= (1 << RIGHT_ENC_PIN_A) | (1 << RIGHT_ENC_PIN_B);  // right encoder
+
+  //Enable the PCINT2 interrupt group (PCINT16-23)
+  PCICR |= (1 << PCIE2);
   #endif
-  initMotorController();
-  resetPID();
+  initMotorController();  // Set up motor driver pins and PWM
+  resetPID();             // Zero PID state (targets, integrals, previous errors)
   #endif
+  
   ```
+
 - Port K port register pins (which are pin A8 to A15) of Arduino mega2560 are used for interrupt routine.
-- Modify `encoder_driver.h` and `motor_driver.h` sections according to the following wiring diagram: 
+- Modify `encoder_driver.h` and `motor_driver.h` sections according to the following wiring diagram:
 
-| Description | L298N Encoder Motor Driver | Arduino Mega2560 |
+- **Wiring between  DC motor encoder terminals and Arduino Mega2560**
+
+| DC Motor Encoder | Arduino Mega2560 | Description |
 |---|---|---|
-| Left motor encoder signal | A phase signal feedback | Pin A8 Arduino Mega2560 |
-| Left motor encoder signal | B phase signal feedback | Pin A9 Arduino Mega2560 |
-| Right motor encoder signal | A phase signal feedback | Pin A11 Arduino Mega2560 |
-| Right motor encoder signal | B phase signal feedback | Pin A10 Arduino Mega2560 |
-| Left motor encoder signal | Positive terminal | Arduino Mega2560 3V |
-| Left Motor Encoder | Negative terminal | GND pin Arduino Mega2560 |
-| Right Motor Encoder | Positive terminal | Arduino Mega2560 3V |
-| Right Motor Encoder | Negative terminal | GND pin Arduino Mega2560 |
+| Positive terminal | 3V pin | left motor encoder 3.3v power supply |
+| Negative terminal | GND pin | left motor encoder ground |
+| Phase A | Pin A8 | Left motor quadrature encoder signal a |
+| Phase B | Pin A9 | Left motor quadrature encoder signal b |
+| Phase A | Pin A11 | Right motor quadrature encoder signal a |
+| Phase B | Pin A10 | Right motor quadrature encoder signal b |
+| Positive terminal | 3V pin | Right motor encoder 3.3v power supply |
+| Negative terminal | GND pin | Right motor encoder ground |
 
-<br>
+- **Wiring between L298N motor driver and DC motor power supply**
 
-| Description | Arduino Mega2560 | DC Motor |
+| DC Motor Terminal | L298N Output Port | Description |
 |---|---|---|
-| | Left Motor Positive terminal | OUT2 L298N motor driver |
-| | Left Motor negative terminal | OUT1 L298N motor driver |
-| | Right Motor positive terminal | OUT3 L298N motor driver |
-| | Right Motor negative terminal | OUT4 L298N motor driver |
+| Positive terminal | OUT2 | Left Drive Motor (Terminal A) |
+| Negative terminal | OUT1 | Left Drive Motor (Terminal B) |
+| Positive terminal | OUT3 | Right Drive Motor (Terminal A) |
+| Negative terminal | OUT4 | Right Drive Motor (Terminal B) |
 
-<br>
+- **Wiring between L298N motor driver and Arduino Mega2560**
 
-| Description | Arduino Mega2560 | DC Motor |
+| L298N Motor Driver | Arduino Mega2560 | Description |
 |---|---|---|
-| | Left Motor direction (IN1, L298N motor driver) | Pin D9 Arduino Mega2560 |
-| | Left Motor direction (IN2, L298N motor driver) | Pin D5 Arduino Mega2560 |
-| | Left Motor enable (ENA, L298N motor driver) | Pin D12 Arduino Mega2560 |
-| | Right Motor direction (IN3, L298N motor driver) | Pin D10 Arduino Mega2560 |
-| | Right Motor direction (IN4, L298N motor driver) | Pin D6 Arduino Mega2560 |
-| | Right Motor Enable (ENB, L298N motor driver) | Pin A13 Arduino Mega2560 |
+| IN1 | Pin D9 | Left motor forward / reverse control (Direction A) |
+| IN2 | Pin D5 | Left motor reverse / forward control (Direction B) |
+| ENA | Pin D12 | Left motor PWM speed & enable control |
+| IN3 | Pin D10 | Right motor forward / reverse control (Direction A) |
+| IN4 | Pin D6 | Right motor reverse / rorward control (Direction B) |
+| ENB | Pin A13 | Right motor PWM speed & enable control |
 
 - The modified version for this project can be found [`here`]( https://github.com/eyasuder/ros_arduino_bridge)
 
@@ -181,13 +186,12 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 
 ### Software Requirements
 
-- <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
-- <img src="https://img.shields.io/badge/ROS2-Humble-22314E?style=for-the-badge&logo=ros&logoColor=white" />
-- <img src="https://img.shields.io/badge/Gazebo-Fortress-FF6C00?style=for-the-badge&logo=gazebo&logoColor=white" />
-- <img src="https://img.shields.io/badge/RViz2-Visualization-22314E?style=for-the-badge&logo=ros&logoColor=white" />
-- <img src="https://img.shields.io/badge/Nav2-Navigation-22314E?style=for-the-badge&logo=ros&logoColor=white" />
-- <img src="https://img.shields.io/badge/SLAM_Toolbox-Mapping-22314E?style=for-the-badge&logo=ros&logoColor=white" />
-- <img src="https://img.shields.io/badge/Arduino-IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white" />
+ <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" /> <img src="https://img.shields.io/badge/ROS2-Humble-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+ <img src="https://img.shields.io/badge/Gazebo-Fortress-FF6C00?style=for-the-badge&logo=gazebo&logoColor=white" />
+ <img src="https://img.shields.io/badge/RViz2-Visualization-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+ <img src="https://img.shields.io/badge/Nav2-Navigation-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+  <img src="https://img.shields.io/badge/SLAM_Toolbox-Mapping-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+ <img src="https://img.shields.io/badge/Arduino-IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white" />
 
 
 ---
