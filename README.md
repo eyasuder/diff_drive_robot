@@ -159,11 +159,11 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
 <table>
 <tr>
   <td align="center">
-     <img width="400" height="400" src="./src/diff_drive_robot/Files/images/simulation_images/Wiring_diagram.png"/><br>
+     <img width="600" height="600" src="./src/diff_drive_robot/Files/images/simulation_images/Wiring_diagram.png"/><br>
      <b>Wiring</b><br>
   </td>
   <td align= "center">
-     <img src="./src/diff_drive_robot/Files/images/simulation_images/motor_wiring_demo.jpeg" width="500" height="400">
+     <img src="./src/diff_drive_robot/Files/images/simulation_images/motor_wiring_demo.jpeg" width="600" height="600">
 	 <b>Wiring demo</b>
   </td>
 </tr>
@@ -174,13 +174,16 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
      <b>Motor Experiment Demo</b>
    </td>
    <td align="center">
-     <img width="500" height="500" src="https://github.com/user-attachments/assets/1cbe862e-98ff-44a5-9b81-eb6514ea69f5" />
+    <img width="550" height="600" alt="ROS_Arduino" src="https://github.com/user-attachments/assets/f36cc306-e795-43fa-8bd7-49df767a8932" />
      <b>ROS to Motor Communication Layer</b>
    </td>
 </tr>
 </table>
 
 ---
+
+
+
 
 ## 🧠 Software Stack
 
@@ -192,7 +195,6 @@ This is to determined the encoder counts per revolution (CPR) of the dc motor an
  <img src="https://img.shields.io/badge/Nav2-Navigation-22314E?style=for-the-badge&logo=ros&logoColor=white" />
   <img src="https://img.shields.io/badge/SLAM_Toolbox-Mapping-22314E?style=for-the-badge&logo=ros&logoColor=white" />
  <img src="https://img.shields.io/badge/Arduino-IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white" />
-
 
 ---
 
